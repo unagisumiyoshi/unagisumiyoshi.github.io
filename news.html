@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>お知らせ</title>
+<style>
+    body {
+      background-color: transparent;
+      margin: 0;
+      font-family: 'Shippori Mincho B1', serif;
+      color: #fafaf9;
+      font-size: 16px;
+    }
+
+    .news-container {
+      padding: 10px;
+      background: linear-gradient(to bottom right, #050504(40, 40, 40, 0.9), rgba(20, 20, 20, 0.9));
+    border: 3px solid #050504; /* 金色風 */
+    border-radius: 8px;
+    box-shadow: 0 0 15px #fefdfd(214, 182, 123, 0.3); /* 金縁の輝き */
+    margin: 5px 0;
+    position: relative;
+    }
+
+    .news-item {
+      border-bottom: 1px solid  #f3cfcf;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+    .news-title {
+      font-weight: bold;
+      font-size: 18px;
+      color:  #9d0808;
+    }
+
+    .news-content {
+      display: none;
+      padding: 8px 0 0 10px;
+      font-size: 15px;
+      color: #050504;
+    }
+
+    .news-item.active .news-content {
+      display: block;
+    }
+  </style>
+</head>
+<body><h1>お知らせ</h1>
+<div class="news-container">
+<div class="news-item">
+<div class="news-title">2025/10/26 … 年末年始の営業について</div>
+<div class="news-content">
+        年末は12月30日まで営業いたしますが、12月29日は夜のみ休業とさせていただきます。
+        年始は1月3日より営業いたします。
+      </div>
+</div>
+<div class="news-item">
+<div class="news-title">2025/10/26 … 公式ホームページを開設しました</div>
+<div class="news-content"> <!-- ここにコメント -->
+      </div> 
+</div>
+</div>
+<script>
+    document.querySelectorAll('.news-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+<script defer="True" src="main.js"></script></body>
+</html>

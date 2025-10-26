@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>お品書き｜うなぎの宿 住吉</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&amp;family=Sawarabi+Mincho&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+<!-- 固定されたMENUボタン -->
+
+<!-- 下から出るメニュー -->
+<header class="site-header">
+<h2 class="page-title">お品書き</h2>
+</header>
+<div id="header-placeholder"></div>
+<main class="section">
+<nav class="menu-category-nav">
+<button class="tab-btn" data-target="unagi">うなぎ料理</button>
+<button class="tab-btn" data-target="gohan">ご飯物各種</button>
+<button class="tab-btn" data-target="ippin">一品料理</button>
+<button class="tab-btn" data-target="course">コース料理</button>
+<button class="tab-btn" data-target="takeout">お持ち帰り</button>
+<button class="tab-btn" data-target="delivery">出前</button>
+</nav>
+<section class="menu-tab active" id="unagi">
+<h2>うなぎ料理</h2>
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img alt="かさね" loading="lazy" src="kasane.jpg"/></div>
+<div class="swiper-slide"><img alt="う巻き" loading="lazy" src="umaki.jpg"/></div>
+<div class="swiper-slide"><img alt="竹筒" loading="lazy" src="taketutu.jpg"/></div>
+</div>
+<!-- ナビゲーション矢印 -->
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+<h3>うな重</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">小並</span><span class="menu-item-price">3,465円</span></li>
+<li> <span class="menu-item-name">並</span><span class="menu-item-price">4,290円</span></li>
+<li> <span class="menu-item-name">上</span><span class="menu-item-price">5,060円</span></li>
+<li> <span class="menu-item-name">特上</span><span class="menu-item-price">5,885円</span></li>
+<li> <span class="menu-item-name">かさね重</span><span class="menu-item-price">7,480円</span></li>
+<li> <span class="menu-item-name">うなぎまぶし</span><span class="menu-item-price">4,180円</span></li>
+<div class="unagi-toggle-box">
+  <button class="toggle-btn">うなぎの量の目安はこちら</button>
+  <div class="toggle-content">
+    <img src="unagiryo.jpg" alt="うなぎの量の目安" class="responsive-image">
+  </div>
+</div>
+<!-- <li>並　…　4,290円</li>
+<li>上　…　5,060円</li>
+<li>特上　…　5,885円</li>
+<li>かさね重　…　7,480円</li>
+<li>うなぎまぶし　…　4,180円</li> -->
+</ul>
+<h3>うな丼・その他</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">大串丼</span><span class="menu-item-price">2,640円</span></li>
+<li> <span class="menu-item-name">ミニまぶし丼</span><span class="menu-item-price">1,870円</span></li>
+<li> <span class="menu-item-name">竹筒うなぎ弁当</span><span class="menu-item-price">3,465円</span></li>
+<li> <span class="menu-item-name">一本焼き</span><span class="menu-item-price">7,480円</span></li>
+<!-- <li>大串丼　…　2,640円</li>
+<li>ミニまぶし丼　…　1870円</li>
+<li>竹筒うなぎ弁当　…　3,465円</li>
+<li>一本焼き　…　7,480円</li> -->
+</ul>
+<h3>うなぎ料理</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">蒲焼</span><span class="menu-item-price">2,420円</span></li>
+<li> <span class="menu-item-name">白焼</span><span class="menu-item-price">2,420円</span></li>
+<li> <span class="menu-item-name">うなぎのたたき</span><span class="menu-item-price">2,420円</span></li>
+<li> <span class="menu-item-name">うまき</span><span class="menu-item-price">3,300円</span></li>
+<li> <span class="menu-item-name">うざく</span><span class="menu-item-price">1,870円</span></li>
+<li> <span class="menu-item-name">うな川</span><span class="menu-item-price">円</span></li>
+<li> <span class="menu-item-name">きも焼き</span><span class="menu-item-price">770円</span></li>
+<!-- <li>蒲焼　…　2,420円</li>
+<li>白焼　…　2,420円</li>
+<li>うなぎのたたき　…　2,420円</li>
+<li>うまき　…　3,300円</li>
+<li>うざく　…　1,870円</li>
+<li>うな川　…　円</li>
+<li>きも焼き　…　770円</li> -->
+
+<p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込10％</p>
+</ul>
+<!-- <div class="menu-items">
+<p><strong>うな重</strong>　小並　…　3,465円</p>
+<p><strong>うな重</strong>　並　…　4,290円</p>
+<p><strong>うな重</strong>　上　…　5,060円円</p>
+<p><strong>うな重</strong>　特上　…　5,885円</p>
+<p><strong>大串丼</strong>　…　2,640円 <br/><span style="color:#faa508;">（平日ランチ　…　2,530円）</span></p>
+<br/><p><strong>ミニまぶし丼</strong>　…　1,870円<br/> <span style="color:#faa508;">（平日ランチ　…　1,815円）</span></p>
+<br/><p><strong>かさね重</strong>　…　7,480円</p>
+<p><strong>竹筒うなぎ弁当</strong>　…　3,465円</p>
+<p><strong>うなぎまぶし</strong>　…　4,180円</p>
+<p><strong>一本焼き</strong>　…　7,480円</p>
+<p><strong>蒲焼</strong>　…　2,420円</p>
+<p><strong>白焼</strong>　…　2,420円</p>
+<p><strong>鰻のたたき</strong>　…　2,420円</p>
+<p><strong>きも焼き</strong>　…　770円</p>
+<p><strong>うざく</strong>　…　1,870円</p>
+<figcaption><strong>うまき</strong>　…　3,300円</figcaption>
+<figure class="menu-image">
+<img alt="うまき" loading="lazy" src="umaki.jpg" style="max-width: 300px; width: 100%; border-radius: 8px;"/>
+<p class="caption">うまき</p>
+<p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込10％</p>
+</figure>
+</div> -->
+</section>
+<section class="menu-tab" id="gohan">
+<h2>ご飯物各種</h2>
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img alt="かさね" loading="lazy" src="gozen.JPG"/></div>
+<div class="swiper-slide"><img alt="う巻き" loading="lazy" src="tirashi2.JPG"/></div>
+<div class="swiper-slide"><img alt="竹筒" loading="lazy" src="mama.JPG"/></div>
+</div>
+<!-- ナビゲーション矢印 -->
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+<h3>天ぷら</h3>
+<ul class="menu-list">
+  <li> <span class="menu-item-name">大串丼</span><span class="menu-item-price">2,640円</span></li>
+<li> <span class="menu-item-name">ミニまぶし丼</span><span class="menu-item-price">1,870円</span></li>
+<li> <span class="menu-item-name">竹筒うなぎ弁当</span><span class="menu-item-price">3,465円</span></li>
+<li> <span class="menu-item-name">一本焼き</span><span class="menu-item-price">7,480円</span></li>
+<!-- <li>天丼　…　3,465円</li>
+<li>天重　…　4,290円</li>
+<li>天ぷら御膳　…　5,060円</li> -->
+</ul>
+<h3>お刺身</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">さしみ丼</span><span class="menu-item-price">1,540円</span></li>
+<li> <span class="menu-item-name">さしみちらし寿司</span><span class="menu-item-price">2,640円</span></li>
+<li> <span class="menu-item-name">刺身御膳</span><span class="menu-item-price">2,970円</span></li>
+<!-- <li>さしみ丼　…　2,640円</li>
+<li>さしみちらし寿司　…　1870円</li>
+<li>刺身御前　…　3,465円</li> -->
+</ul>
+<h3>揚げ物</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">ソースカツ丼</span><span class="menu-item-price">1,540円</span></li>
+<li> <span class="menu-item-name">とんかつごはん</span><span class="menu-item-price">1,760円</span></li>
+<li> <span class="menu-item-name">から揚げ定食</span><span class="menu-item-price">1,210円</span></li>
+<!-- <li>ソースカツ丼　…　2,420円</li>
+<li>とんかつごはん　…　2,420円</li>
+<li>から揚げ定食　…　2,420円</li> -->
+</ul>
+<h3>その他</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">お茶づけ</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">梅茶づけ</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">うなぎ茶づけ</span><span class="menu-item-price">1,870円</span></li>
+<li> <span class="menu-item-name">おままごと箱弁当<br>（お子様用）</span><span class="menu-item-price">1,320円</span></li>
+<!-- <li>お茶づけ　…　2,420円</li>
+<li>梅茶づけ　…　2,420円</li>
+<li>うなぎ茶漬け　…　2,420円</li>
+<li>おままごと箱弁当（お子様用）　…　3,300円</li> -->
+</ul>
+<p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込10％</p>
+<!-- <div class="menu-block">
+<p><strong>天丼</strong>　…　1,540円</p>
+<p><strong>天重</strong>　…　1,980円</p>
+<p><strong>ソースかつ丼</strong>　…　1,540円</p>
+<p><strong>とんかつごはん</strong>　…　1,760円</p>
+<p><strong>から揚げ定食</strong>　…　1,210円</p>
+<p><strong>住吉さしみちらし寿司</strong>　…　2,640円</p>
+<div class="menu-photo">
+<img alt="住吉さしみちらし寿司" loading="lazy" src="tirashi2.JPG"/>
+<p class="caption">住吉さしみちらし寿司</p>
+</div>
+<p><strong>天ぷら御膳</strong>　…　2,970円</p>
+<div class="menu-photo">
+<img alt="天ぷら御膳" loading="lazy" src="gozen.JPG"/>
+<p class="caption">天ぷら御膳</p>
+</div>
+<p><strong>刺身御膳</strong>　…　2,970円</p>
+<p><strong>お茶づけ</strong>　…　550円</p>
+<p><strong>梅茶づけ</strong>　…　550円</p>
+<p><strong>うなぎ茶づけ</strong>　…　1,870円</p>
+<p><strong>おままごと箱弁当</strong>（お子様用）　…　1,320円</p>
+<div class="menu-photo">
+<img alt="おままごと箱弁当" loading="lazy" src="mama.JPG"/>
+<p class="caption">おままごと箱弁当</p>
+<p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込10％</p>
+</div>
+</div> --></section>
+<section class="menu-tab" id="ippin">
+<h2>一品料理</h2>
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img alt="さしみ盛り合わせ" loading="lazy" src="sashimi.JPG"/></div>
+<div class="swiper-slide"><img alt="天ぷら盛り合わせ" loading="lazy" src="tempra.JPG"/></div>
+<div class="swiper-slide"><img alt="うざく" loading="lazy" src="uazaku.jpg"/></div>
+</div>
+<!-- ナビゲーション矢印 -->
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+<h3>揚げ物・サラダ</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">天ぷら盛り合わせ</span><span class="menu-item-price">1,980円</span></li>
+<li> <span class="menu-item-name">揚げ出し豆腐</span><span class="menu-item-price">695円</span></li>
+<li> <span class="menu-item-name">とりから揚げ</span><span class="menu-item-price">935円</span></li>
+<li> <span class="menu-item-name">とんかつ</span><span class="menu-item-price">1,320円</span></li>
+<li> <span class="menu-item-name">サラダ</span><span class="menu-item-price">385円</span></li>
+<!-- <li>天ぷら盛り合わせ　…　1,980円</li>
+<li>揚げ出し豆腐　…　605円</li>
+<li>とり唐揚げ　…　935円</li>
+<li>とんかつ　…　1,320円</li>
+<li>サラダ　…　385円</li> -->
+</ul>
+<div class="menu-image">
+<img alt="天ぷら盛り合わせ" loading="lazy" src="tempra.jpg"/>
+<p class="caption">天ぷら盛り合わせ</p>
+</div>
+<h3>ご飯・つけもの・汁物</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">ご飯</span><span class="menu-item-price">220円</span></li>
+<li> <span class="menu-item-name">つけもの</span><span class="menu-item-price">440円</span></li>
+<li> <span class="menu-item-name">赤だしなめこ汁</span><span class="menu-item-price">385円</span></li>
+<li> <span class="menu-item-name">わかめみそ汁</span><span class="menu-item-price">165円</span></li>
+<!-- <li>御飯　…　220円</li>
+<li>つけもの　…　440円</li>
+<li>赤だしなめこ汁　…　385円</li>
+<li>わかめみそ汁　…　165円</li> -->
+</ul>
+<h3>酢の物</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">おまかせ酢の物</span><span class="menu-item-price">605円</span></li>
+<li> <span class="menu-item-name">わかめ</span><span class="menu-item-price">495円</span></li>
+<li> <span class="menu-item-name">貝のぬた</span><span class="menu-item-price">715円</span></li>
+<!-- <li>おまかせ酢の物　…　605円</li>
+<li>わかめ　…　495円</li>
+<li>貝のぬた　…　715円</li> -->
+</ul>
+<h3>お造り</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">マグロ</span><span class="menu-item-price">1,540円</span></li>
+<li> <span class="menu-item-name">カンパチ・マグロ盛</span><span class="menu-item-price">1,540円</span></li>
+<li> <span class="menu-item-name">あまえび</span><span class="menu-item-price">1,045円</span></li>
+<li> <span class="menu-item-name">さしみ盛り合わせ</span><span class="menu-item-price">2,640円</span></li>
+<!-- <li>マグロ　…　1,540円</li>
+<li>カンパチ・マグロ盛　…　1,540円</li>
+<li>あまえび　…　1,045円</li>
+<li>さしみ盛り合わせ　…　2,640円</li> -->
+</ul>
+<div class="menu-image">
+<img alt="さしみ盛り合わせ" loading="lazy" src="sashimi.jpg"/>
+<p class="caption">さしみ盛り合わせ</p>
+</div>
+<h3>一品料理</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">えだ豆</span><span class="menu-item-price">275円</span></li>
+<li> <span class="menu-item-name">とりわさ</span><span class="menu-item-price">605円</span></li>
+<li> <span class="menu-item-name">馬刺し</span><span class="menu-item-price">1,100円</span></li>
+<li> <span class="menu-item-name">きのこチーズ焼き</span><span class="menu-item-price">770円</span></li>
+<li> <span class="menu-item-name">茶わん蒸し</span><span class="menu-item-price">605円</span></li>
+<li> <span class="menu-item-name">焼きとり</span><span class="menu-item-price">715円</span></li>
+<li> <span class="menu-item-name">梅どり</span><span class="menu-item-price">715円</span></li>
+<li> <span class="menu-item-name">岩魚塩焼</span><span class="menu-item-price">1,100円</span></li>
+<li> <span class="menu-item-name">あゆ塩焼</span><span class="menu-item-price">1,100円</span></li>
+<li> <span class="menu-item-name">カンパチカマ焼き</span><span class="menu-item-price">1,320円</span></li>
+<li> <span class="menu-item-name">沢がにのから揚げ</span><span class="menu-item-price">660円</span></li>
+<li> <span class="menu-item-name">地ばちの子</span><span class="menu-item-price">770円</span></li>
+<!-- <li>えだ豆　…　275円</li>
+<li>とりわさ　…　605円</li>
+<li>馬刺し　…　1,100円</li>
+<li>うな肝　…　2,035円</li>
+<li>きのこチーズ焼き　…　770円</li>
+<li>茶わん蒸し　…　605円</li>
+<li>焼きとり　…　715円</li>
+<li>梅どり　…　715円</li>
+<li>岩魚塩焼　…　1,100円</li>
+<li>あゆ塩焼　…　1,100円</li>
+<li>カンパチ カマ焼き　…　1,320円</li>
+<li>沢ガニの唐揚げ　…　660円</li>
+<li>地ばちの子　…　770円</li> -->
+</ul>
+<div class="menu-image">
+<img alt="あゆ塩焼" loading="lazy" src="ayu.jpg"/>
+<p class="caption">あゆ塩焼</p>
+<p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込10％</p>
+</div>
+</section>
+<section class="menu-tab" id="course">
+<h2>宴会／コース料理</h2>
+<ul class="menu-list">
+<li>会席料理 … 4,400円より</li>
+<li>うなぎの宿（小鉢・酢の物・鮎塩焼き・三ツ盛・お刺身・白焼・蒲焼・肝吸・うな川）… 7,370円</li>
+<li>うなぎづくし（きも焼き・あらい・蒲焼・磯巻き・唐揚げ・うな川・うざく など／うなぎ茶碗蒸し又はうな酒）… 10,670円</li>
+<p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込10％</p>
+<p class="menu-note">
+  詳しくは <a href="enkai.html" class="enkai-link">宴会ページ</a> をご覧ください。
+</p>
+</ul>
+<div class="menu-image">
+<img alt="コース料理" loading="lazy" src="kaiseki1.jpg"/>
+<p class="menu-caption">各種ご宴会承ります</p>
+<p class="menu-description">
+          御会席、御宴会、御花見の宴、御祝い、御法事など、<br>
+          お気軽にご利用くださいませ。御相談承ります。
+        </br></p>
+        
+
+</div>
+</section>
+<section class="menu-tab" id="takeout">
+<h2>お持ち帰り</h2>
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img alt="かさね" loading="lazy" src="kasane.jpg"/></div>
+<div class="swiper-slide"><img alt="う巻き" loading="lazy" src="umaki.jpg"/></div>
+<div class="swiper-slide"><img alt="竹筒" loading="lazy" src="taketutu.jpg"/></div>
+</div>
+<!-- ナビゲーション矢印 -->
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+<h3>お持ち帰り</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">蒲焼一串</span><span class="menu-item-price">2,376円</span></li>
+<li> <span class="menu-item-name">白焼一串</span><span class="menu-item-price">2,376円</span></li>
+<li> <span class="menu-item-name">大串弁当</span><span class="menu-item-price">2,592円</span></li>
+<li> <span class="menu-item-name">小並弁当</span><span class="menu-item-price">3,402円</span></li>
+<li> <span class="menu-item-name">並弁当</span><span class="menu-item-price">4,212円</span></li>
+<li> <span class="menu-item-name">上弁当</span><span class="menu-item-price">4,968円</span></li>
+<li> <span class="menu-item-name">特上弁当</span><span class="menu-item-price">5,778円</span></li>
+<li> <span class="menu-item-name">うなぎまぶし弁当</span><span class="menu-item-price">4,104円</span></li>
+<li> <span class="menu-item-name">ごはん大盛り</span><span class="menu-item-price">162円</span></li>
+<li> <span class="menu-item-name">きも焼き</span><span class="menu-item-price">756円</span></li>
+<li> <span class="menu-item-name">うなぎの骨せんべい</span><span class="menu-item-price">648円</span></li>
+<li> <span class="menu-item-name">冷凍きざみうなぎ<br>（真空パック）</span><span class="menu-item-price">1,620円</span></li>
+<!-- <li>蒲焼一串　…　2,376円</li>
+<li>白焼一串　…　2,376円</li>
+<li>大串弁当　…　2,592円</li>
+<li>小並弁当　…　3,402円</li>
+<li>並弁当　…　4,212円</li>
+<li>上弁当　…　4,968円</li>
+<li>特上弁当　…　5,778円</li>
+<li>うなぎまぶし弁当　…　4,104円</li>
+<li>ごはん大盛　…　162円</li>
+<li>きも焼き　…　756円</li>
+<li>うなぎの骨せんべい　…　648円</li>
+<li>冷凍きざみうなぎ（真空パック）　…　1,620円</li>
+<p><strong>蒲焼一串</strong>　…　2,376円</p>
+<p><strong>白焼一串</strong>　…　2,376円</p>
+<p><strong>大串弁当</strong>　…　2,592円</p>
+<p><strong>小並</strong>　…　3,402円</p>
+<p><strong>並</strong>　…　4,212円</p>
+<p><strong>上</strong>　…　4,968円</p>
+<p><strong>特上</strong>　…　5,778円</p>
+<p><strong>うなぎまぶし</strong>　…　764円</p>
+<p><strong>ごはん大盛</strong>　…　162円</p>
+<p><strong>きも焼き</strong>　…　764円</p>
+<p><strong>うなぎの骨せんべい</strong>　…　2,640円</p>
+<p><strong>冷凍きざみうなぎ（真空パック）</strong>　…　1,620円</p>
+</ul> -->
+<p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込8％</p>
+</section>
+<section class="menu-tab" id="delivery">
+<h2>出前</h2>
+<h3>うな重・丼</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">大串重</span><span class="menu-item-price">2,754円</span></li>
+<li> <span class="menu-item-name">うな重 小並</span><span class="menu-item-price">3,402円</span></li>
+<li> <span class="menu-item-name">うな重 並</span><span class="menu-item-price">4,212円</span></li>
+<li> <span class="menu-item-name">うな重 上</span><span class="menu-item-price">4,968円</span></li>
+<li> <span class="menu-item-name">うな重 特上</span><span class="menu-item-price">5,778円</span></li>
+<li> <span class="menu-item-name">かさね重</span><span class="menu-item-price">7,344円</span></li>
+<li> <span class="menu-item-name">うなぎまぶし</span><span class="menu-item-price">4,104円</span></li>
+<li> <span class="menu-item-name">ご飯大盛り</span><span class="menu-item-price">162円</span></li>
+<!-- <li>大串重　…　2,754円</li>
+<li>うな重 小並　…　3,402円</li>
+<li>うな重 並　…　4,212円</li>
+<li>うな重 上　…　4,968円</li>
+<li>うな重 特上　…　5,778円</li>
+<li>かさね重　…　7,344円</li>
+<li>うなぎまぶし　…　4,104円</li>
+<li>ごはん大盛り　…　162円</li> -->
+</ul>
+<h3>ご飯もの</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">さしみちらし寿司</span><span class="menu-item-price">2,592円</span></li>
+<li> <span class="menu-item-name">天重</span><span class="menu-item-price">1,944円</span></li>
+<li> <span class="menu-item-name">ソースカツ重</span><span class="menu-item-price">1,512円</span></li>
+<li> <span class="menu-item-name">玉子カツ重</span><span class="menu-item-price">1,566円</span></li>
+<li> <span class="menu-item-name">ごはん大盛り</span><span class="menu-item-price">162円</span></li>
+<li> <span class="menu-item-name">ご飯単品</span><span class="menu-item-price">216円</span></li>
+<li> <span class="menu-item-name">おままごと箱弁当</span><span class="menu-item-price">1,296円</span></li>
+<!-- <li>さしみちらし寿司　…　2,592円</li>
+<li>天重　…　1,944円</li>
+<li>ソースカツ重　…　1,512円</li>
+<li>玉子カツ重　…　1,566円</li>
+<li>ごはん大盛り　…　162円</li>
+<li>ごはん単品　…　216円</li>
+<li>おままごと箱弁当　…　1,296円</li> -->
+
+</ul>
+<h3>一品料理</h3>
+<ul class="menu-list">
+  <li> <span class="menu-item-name">蒲焼</span><span class="menu-item-price">2,376円</span></li>
+<li> <span class="menu-item-name">白焼</span><span class="menu-item-price">2,376円</span></li>
+<li> <span class="menu-item-name">きも焼き</span><span class="menu-item-price">756円</span></li>
+<li> <span class="menu-item-name">うなぎの骨せんべい</span><span class="menu-item-price">648円</span></li>
+<li> <span class="menu-item-name">うまき</span><span class="menu-item-price">3,240円</span></li>
+<li> <span class="menu-item-name">さしみ盛り合わせ</span><span class="menu-item-price">2,592円</span></li>
+<li> <span class="menu-item-name">天ぷら盛り合わせ</span><span class="menu-item-price">1,944円</span></li>
+<li> <span class="menu-item-name">とりから揚げ</span><span class="menu-item-price">162円</span></li>
+<li> <span class="menu-item-name">馬刺し</span><span class="menu-item-price">1,080円</span></li>
+<li> <span class="menu-item-name">茶わん蒸し</span><span class="menu-item-price">594円</span></li>
+<li> <span class="menu-item-name">サラダ</span><span class="menu-item-price">378円</span></li>
+<!-- <li>蒲焼　…　2,376円</li>
+<li>白焼　…　2,376円</li>
+<li>きも焼き　…　756円</li>
+<li>うなぎの骨せんべい　…　648円</li>
+<li>うまき　…　3240円</li>
+<li>さしみ盛り合わせ　…　2,592円</li>
+<li>天ぷら盛り合わせ　…　1,944円</li>
+<li>とりから揚げ　…　918円</li>
+<li>馬刺し　…　1,080円</li>
+<li>茶わん蒸し　…　594円</li>
+<li>サラダ　…　378円</li> -->
+</ul>
+<!-- <div class="menu-items">
+<p>大串重 … 2,754円</p>
+<p>うな重（小並）　…　3,402円</p>
+<p>うな重（並）　…　4,212円</p>
+<p>うな重（上）　…　4,968円</p>
+<p>うな重（特上）　…　5,778円</p>
+<p>かさね重 　…　7,344円</p>
+<p>うなぎまぶし　…　4,104円</p>
+<p>ごはん大盛　…　162円</p>
+<p>蒲焼　…　2,376円</p>
+<p>白焼き　…　2,376円</p>
+<p>きも焼き　…　756円</p>
+<p>うまき　…　3,240円</p>
+<p>うなぎの骨せんべい　…　648円</p>
+<p>さしみ盛り合わせ　…　2,592円</p>
+<p>住吉さしみちらし寿司　…　2,592円</p>
+<p>天ぷら盛り合わせ　…　1,944円</p>
+<p>ソースカツ重　…　1,512円</p>
+<p>玉子カツ重　…　1,566円</p>
+<p>天重　…　1,944円</p>
+<p>おままごと弁当　…　1,296円</p>
+<p>馬刺し　…　1,080円</p>
+<p>とり唐揚げ　…　918円</p>
+<p>茶わん蒸し　…　594円</p>
+<p>サラダ　…　378円</p>
+<p>御飯　…　216円</p>
+<p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込8％</p>
+</div> -->
+<p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込8％</p>
+<p style="font-size: 14px; margin-top: 1em;">※ 夏の期間、生ものの配達はしておりません</p>
+<div class="menu-note" style="margin-top: 40px; background: #e07a3f; color: #1c1c1c; padding: 15px; border-radius: 8px; text-align: center;">
+<strong>配送料：550円（1万円以上のご注文で配送料無料）</strong>
+</div>
+</section>
+</main>
+<div id="menu-placeholder"></div>
+
+<footer class="site-footer">
+<div class="footer-inner">
+<p>© うなぎの宿 住吉</p>
+<p>長野県長野市箱清水2丁目19-31</p>
+<p>Tel：026-232-6304</p>
+</div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
