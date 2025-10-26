@@ -1181,7 +1181,20 @@ body {
   font-size: 0.9rem;
   color: #555;
 }
+@media screen and (max-width: 768px) {
+  .payment-group img {
+    width: 30px;     /* ← 60pxから縮小 */
+    padding: 2px;    /* 内側の余白も少し減らす */
+  }
 
+  .payment-group h4 {
+    font-size: 1rem; /* 見出しも少し小さめ */
+  }
+
+  .payment-group .note {
+    font-size: 0.85rem;
+  }
+}
 .unagi-toggle-box {
   margin-top: 20px;
   text-align: center;
