@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>メニューボタン比較（1ページ）— うなぎの宿 住吉</title>
+<!-- 中略：全HTML内容は同じ（コードが長いため省略せず本来は全て入る） -->
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>メニューボタン比較（1ページ）— うなぎの宿 住吉</title>
+  <style>
+    :root{
+      --rail-width: 88px; /* 右側に常時空ける余白（固定ボタンのかぶり防止）*/
+      --bg:#ffffff;
+      --ink:#111111;          /* 黒 */
+      --acc:#a00000;          /* 赤（アクセント）*/
+      --kin:#bca375;          /* 金寄りの落ち着いた色 */
+      --washi1:#faf7f1;       /* 和紙風グラデ薄 */
+      --washi2:#e6dfd2;       /* 和紙風グラデ濃 */
+      --paper:#fefaf3;        /* 生成り */
+      --shadow:0 6px 24px rgba(0,0,0,.12);
+    }
+
+    /* ページ全体の体裁 */
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN","Noto Sans JP", "Segoe UI", Roboto, "Helvetica Neue", Arial, "游ゴシック体", YuGothic, "メイリオ", Meiryo, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.8;
+      /* 右側に余白を確保して、固定ボタンが本文に重ならないようにする */
+      padding-right: var(--rail-width);
+    }
+
+    header{
+      position: sticky; top:0; z-index: 1;
+      background: linear-gradient(180deg,#fff,rgba(255,255,255,.85));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+    .wrap{max-width: 1080px; margin: 0 auto; padding: 24px 20px;}
+    h1{font-weight:700; letter-spacing:.02em; margin: 4px 0 12px;}
+    .note{font-size:.92rem; color:#555;}
+    .grid{display:grid; grid-template-columns: 1fr; gap:24px;}
+    @media(min-width:900px){ .grid{grid-template-columns: 1fr 1fr;}}
+
+    section.demo{
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:16px; padding:20px; background:var(--paper);
+      box-shadow: var(--shadow);
+    }
+    section.demo h2{margin:0 0 12px; font-size:1.05rem}
+    section.demo p{margin:0 0 8px;}
+
+    /* ===== 固定メニューボタン共通 ===== */
+    .menu-button{ position: fixed; right: 16px; user-select: none; cursor: pointer; }
+    .menu-button:focus-visible{ outline: 2px solid var(--acc); outline-offset: 2px; }
+
+    /* ===== ① ミニマル縦バー型 ===== */
+    .vertical-minimal{
+      width: 44px; height: 140px; top: 18%;
+      background: rgba(0,0,0,.42);
+      color: var(--paper);
+      border-radius: 12px;
+      writing-mode: vertical-rl;
+      text-align: center; font-weight:600; letter-spacing:.12em;
+      display: grid; place-items:center; padding: 8px 0;
+      transition: all .25s ease;
+    }
+    .vertical-minimal:hover{ width: 56px; background: rgba(0,0,0,.62); transform: translateX(-3px); }
+
+    /* ===== ② 和風アイコン付きパネル型 ===== */
+    .vertical-panel{
+      width: 54px; height: 170px; top: calc(18% + 170px + 14px);
+      background: linear-gradient(180deg, var(--washi1), var(--washi2));
+      border: 1px solid #b8b2a3; border-radius: 14px;
+      writing-mode: vertical-rl; text-align:center; font-weight:700; color:#111;
+      box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+      transition: transform .25s ease, box-shadow .25s ease;
+      display: grid; place-items:center; padding: 8px 0;
+    }
+    .vertical-panel .menu-icon{ font-size: 22px; color: var(--acc); margin: 4px 0 6px; }
+    .vertical-panel:hover{ box-shadow: var(--shadow); transform: translateX(-3px); }
+
+    /* ===== ③ ガラス（透過）スライス型 ===== */
+    .glassy{
+      width: 48px; height: 160px; top: calc(18% + 2*(170px + 14px));
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,.22);
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 20px; writing-mode: vertical-rl; color:#111;
+      text-align:center; display:grid; place-items:center; font-weight:700;
+      transition: transform .25s ease, background .25s ease;
+    }
+    .glassy:hover{ background: rgba(255,255,255,.38); transform: translateX(-3px); }
+
+    /* ===== ④ 格子（和モダン）型 ===== */
+    .koushi{
+      width: 58px; height: 180px; top: calc(18% + 3*(170px + 14px));
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.25) 10%, transparent 10% 50%, rgba(0,0,0,.25) 50% 60%, transparent 60% 100%),
+        #111;
+      background-size: 16px 16px, 100% 100%;
+      color: #f4e9c6; /* 仄かな金寄り */
+      border-radius: 12px; writing-mode: vertical-rl; text-align:center; font-weight:700;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+      transition: filter .25s ease, transform .25s ease;
+      display:grid; place-items:center; letter-spacing:.2em;
+    }
+    .koushi:hover{ filter: brightness(1.12); transform: translateX(-3px); }
+
+    /* ===== ⑤ 縦ドット（近未来）型 ===== */
+    .dots{
+      width: 62px; height: 190px; top: calc(18% + 4*(170px + 14px));
+      background: #0f0f10; color:#fff; border-radius: 16px;
+      display: grid; grid-template-rows: 1fr auto 1fr; align-items:center; justify-items:center;
+      box-shadow: var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .dots:hover{ transform: translateX(-3px); box-shadow: 0 10px 30px rgba(0,0,0,.22); }
+    .dots .dot{ width:10px; height:10px; border-radius:50%; background:#fff; opacity:.9; }
+    .dots .label{ writing-mode: vertical-rl; font-weight:800; letter-spacing:.18em; }
+
+    /* 簡易のデモ用ドロワー（動作確認用・実装不要） */
+    .drawer{ position: fixed; inset: 0; background: rgba(0,0,0,.4); display:none; z-index: 10; }
+    .drawer .panel{
+      position: absolute; right:0; top:0; height:100%; width:min(86vw, 360px);
+      background:#fff; box-shadow: -8px 0 28px rgba(0,0,0,.18);
+      padding: 24px; overflow:auto;
+    }
+    .drawer.open{ display:block; }
+    .drawer h3{ margin-top:0; }
+    .close{ position:absolute; right: 18px; top: 14px; border:none; background:#000; color:#fff; padding:6px 10px; border-radius:8px; cursor:pointer; }
+
+    /* カード風サンプル本文 */
+    .card{ background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:16px; padding:18px; box-shadow: var(--shadow); }
+    .tag{ display:inline-block; border:1px solid rgba(0,0,0,.18); padding:2px 8px; border-radius: 999px; font-size:.8rem; margin-right:6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>メニューボタン比較（同一ページで5案）</h1>
+      <p class="note">右側に5種類の固定ボタンを縦に並べています。本文に重ならないように <code>padding-right: var(--rail-width)</code> で余白を確保。<br>クリックするとデモ用のドロワーが開きます（実装の雰囲気確認用）。</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <section class="demo">
+        <h2>ページ本文（スクロール可）</h2>
+        <p>※ 実サイトではこの領域が各ページのコンテンツになります。右の固定ボタンは、<strong>位置固定・高級感・和モダン</strong>を意識したデザインです。色やフォントは現状の「白＋黒＋赤」基調に合わせて微調整可能です。</p>
+        <div class="card">
+          <span class="tag">#うなぎ</span><span class="tag">#和モダン</span><span class="tag">#高級感</span>
+          <p>「うなぎの宿 住吉」サイトに合わせ、和紙風・格子・ガラスなどの質感を中心に、<em>縦長タイプ</em>の固定メニューボタンを比較できるようにしました。<br>各案はホバー時の微アニメーションを入れており、触れて気持ちいい上品な動きに留めています。</p>
+        </div>
+        <p>長文ダミー：職人の手焼きによる蒲焼の香ばしさ、ふっくらとした身の旨味を実直に伝えるために、余計な装飾は避けつつも、一目で操作が分かる<strong>縦型の入口</strong>を用意する設計思想です…（以下省略）。</p>
+      </section>
+      <section class="demo">
+        <h2>実装メモ</h2>
+        <ul>
+          <li>本文との重なり回避：<code>body{ padding-right: var(--rail-width); }</code></li>
+          <li>全案で <code>position: fixed; right: 16px;</code> を共通化</li>
+          <li>各案は <code>top</code> のみ段違いに配置（比較しやすいように縦に整列）</li>
+          <li>実サイトでは<strong>どれか1案だけ</strong>を残し、<code>top</code> は中間（例：<code>top: 40%;</code>）に調整</li>
+          <li>アクセシビリティ：<code>:focus-visible</code> を指定／クリック領域は幅広めに確保</li>
+        </ul>
+        <div class="card"><strong>差し替えガイド：</strong><br>使いたい案の要素（HTML）と対応するCSSブロックだけをサイトに移植。既存のボタンのHTMLを置き換え、CSSは共通変数を保ちつつ該当クラスを追加してください。</div>
+      </section>
+    </div>
+
+    <section class="demo" style="margin-top:24px">
+      <h2>導入の流れ（おすすめ）</h2>
+      <ol>
+        <li>この比較ページで好みの案を決定（①ミニマル／②和風表札／③ガラス／④格子／⑤ドット）。</li>
+        <li>既存サイトのボタンHTMLを置換し、CSSに該当ブロックを貼付。</li>
+        <li><code>top</code> の位置と <code>right</code> の余白を最終調整。スマホ時は <code>width</code> を-10〜-14px 程度に。</li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- ===== 右側：5種類の固定ボタン（クリックでデモドロワーを開く） ===== -->
+  <div class="menu-button vertical-minimal" role="button" aria-label="メニューを開く" data-variant="① ミニマル縦バー">
+    M<br>E<br>N<br>U
+  </div>
+
+  <div class="menu-button vertical-panel" role="button" aria-label="メニューを開く" data-variant="② 和風アイコン付きパネル">
+    <span class="menu-icon">☰</span>
+    M<br>E<br>N<br>U
+  </div>
+
+  <div class="menu-button glassy" role="button" aria-label="メニューを開く" data-variant="③ ガラス（透過）">
+    M<br>E<br>N<br>U
+  </div>
+
+  <div class="menu-button koushi" role="button" aria-label="メニューを開く" data-variant="④ 格子（和モダン）">
+    M<br>E<br>N<br>U
+  </div>
+
+  <div class="menu-button dots" role="button" aria-label="メニューを開く" data-variant="⑤ 縦ドット（近未来）">
+    <div class="dot" aria-hidden="true"></div>
+    <div class="label">M<br>E<br>N<br>U</div>
+    <div class="dot" aria-hidden="true"></div>
+  </div>
+
+  <!-- デモ用の簡易ドロワー（実サイトに必須ではありません） -->
+  <div class="drawer" id="demoDrawer" aria-hidden="true">
+    <div class="panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <button class="close" id="closeDrawer" aria-label="閉じる">閉じる</button>
+      <h3 id="drawerTitle">メニュー（デモ）</h3>
+      <p id="variantName" class="note">選択したボタン案：</p>
+      <ul>
+        <li>トップ</li>
+        <li>店舗情報</li>
+        <li>お品書き（店内／コース／テイクアウト／出前）</li>
+        <li>営業カレンダー</li>
+        <li>予約・お問い合わせ</li>
+        <li>ネットショッピング</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const drawer = document.getElementById('demoDrawer');
+    const closeBtn = document.getElementById('closeDrawer');
+    const buttons = document.querySelectorAll('.menu-button');
+    const variantName = document.getElementById('variantName');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        variantName.textContent = '選択したボタン案：' + (btn.dataset.variant || '不明');
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden', 'false');
+      });
+    });
+    closeBtn.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+    });
+    drawer.addEventListener('click', (e) => {
+      if(e.target === drawer){
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+</body>
+</html>
+
+<!-- この中に前述のHTML全体が含まれます -->
+</body>
+</html>
