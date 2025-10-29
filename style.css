@@ -293,17 +293,28 @@ h2::after {
   transform: rotate(90deg) translateY(-2px);
 }
 
-/* スマホ用サイズ調整 */
-@media (max-width: 640px) {
+/* === スマホ時はメニューボタンを右上固定に変更 === */
+@media (max-width: 768px) {
   .fixed-menu-btn {
-    width: 30px;
-    height: 150px;
-    right: 1px;
-    top: 40%;
+    position: fixed;
+    top: 15px;       /* 右上位置 */
+    right: 15px;
+    width: 55px;     /* ボタン幅調整 */
+    height: 55px;    /* 高さを小さくしてスマホで見やすく */
+    border-radius: 50%; /* 丸くして視認性アップ（必要なければ削除） */
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(6px);
+    writing-mode: horizontal-tb; /* 横書き指定 */
+    line-height: 1;
+        font-size: 16px;
+    letter-spacing: 0.05em;
   }
-
+    .fixed-menu-btn br {
+    display: none;
+  }
 }
-
 
 /* === 下から出るメニュー === */
 .bottom-menu-overlay {
@@ -320,7 +331,7 @@ h2::after {
 
 
 .bottom-menu-overlay.open {
-  height: 45vh;
+  height: 50vh;
 }
 
 .bottom-menu-overlay ul {
@@ -1141,7 +1152,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    padding-right: 40px; /* スマホでは不要 */
+    padding-right: 0px; /* スマホでは不要 */
   }
 }
 
