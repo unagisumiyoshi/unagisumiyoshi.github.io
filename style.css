@@ -299,9 +299,9 @@ h2::after {
     position: fixed;
     top: 15px;       /* 右上位置 */
     right: 15px;
-    width: 55px;     /* ボタン幅調整 */
+    width: 70px;     /* ボタン幅調整 */
     height: 55px;    /* 高さを小さくしてスマホで見やすく */
-    border-radius: 50%; /* 丸くして視認性アップ（必要なければ削除） */
+    
     flex-direction: column;
     justify-content: center;
     background: rgba(255,255,255,0.3);
@@ -635,6 +635,12 @@ h2::after {
   border-top: 1px solid #444;
 }
 
+.site-footer a[href^="tel"] {
+  color: #fafaf9;          /* フッターの文字色と合わせる */
+  text-decoration: none;   /* 下線も消す */
+  font-weight: normal;
+}
+
 #loading-overlay {
   position: fixed;
   top: 0;
@@ -932,6 +938,16 @@ h2::after {
   background-color: #e07a3f;
   color: #1c1c1c;
 }
+
+@media (max-width: 768px) {
+  .phone-button {
+    font-size: 15px; /* ← 好きなサイズに調整 */
+    padding: 10px 18px; /* ボタンの高さも少し小さく */
+  }
+}
+
+
+
 .site-logo-header {
   display: flex;
   align-items: center;
@@ -1048,6 +1064,17 @@ h2::after {
   font-size: 25px;
 }
 
+@media (max-width: 768px) {
+  .enkai-list li {
+    font-size: 15px;    /* ← 好きなサイズに調整（例: 14〜16px） */
+    line-height: 1.6;
+    margin: 6px 0;
+  }
+
+  .enkai-list .price {
+    font-size: 15px;    /* 金額部分も同時に縮小 */
+  }
+}
 
 .card-acc {
   border:1px solid #e6e6e6;
@@ -1117,6 +1144,12 @@ font-weight: 700;
 
 /* ===== 1) スマホ～タブレット最適化（<= 768px） ===== */
 @media (max-width: 768px){
+    .banquet-description {
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 20px 15px;
+    text-align: left; /* 中央→左寄せで読みやすく */
+  }
   /* 右上の固定MENUボタンと価格の干渉をより確実に回避 */
   .enkai-list{ padding-right: 2.5rem; }        /* 既存を維持/上書き */
   .card-acc .bar .price{ padding-right: .75rem; }
@@ -1126,9 +1159,14 @@ font-weight: 700;
   .card-acc .bar{ gap: .6rem; }
   .card-acc .bar strong{ font-size: 20px; }    /* 誤記修正後を基準に縮小 */
   .card-acc .bar .price{ font-size: 18px; }
+  .card-acc small {
+    font-size: 13px;
+    line-height: 1.6;
+  }
 
   /* 写真の比率（任意）：縦長端末で画面占有を抑える */
   .card-acc .photo{ aspect-ratio: 4 / 3; }
+
 }
 
 /* ===== 2) 狭幅スマホ（<= 480px） ===== */

@@ -16,7 +16,6 @@
 
     .news-container {
       padding: 10px;
-      background: linear-gradient(to bottom right, #050504(40, 40, 40, 0.9), rgba(20, 20, 20, 0.9));
     border: 3px solid #050504; /* 金色風 */
     border-radius: 8px;
     box-shadow: 0 0 15px #fefdfd(214, 182, 123, 0.3); /* 金縁の輝き */
@@ -46,6 +45,41 @@
     .news-item.active .news-content {
       display: block;
     }
+
+    @media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .news-container {
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 6px;
+
+    border: 1px solid #b48a60; /* スマホだけ金風の縁を少し細く */
+    box-shadow: 0 0 12px rgba(214, 182, 123, 0.25);
+  }
+
+  .news-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f3cfcf;
+  }
+
+  .news-title {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #d44c2a; /* 少し明るい赤茶で視認性↑ */
+  }
+
+  .news-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #010101; /* 暗い背景の上で読める色に */
+    padding: 8px 0 0 10px;
+  }
+}
   </style>
 </head>
 <body><h1>お知らせ</h1>
