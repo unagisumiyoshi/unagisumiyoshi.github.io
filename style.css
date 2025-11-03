@@ -1140,7 +1140,16 @@ font-weight: 700;
   object-fit: cover;
   transition: transform .3s ease;
 }
+/* === 右側固定メニューボタンと重ならないための余白 === */
+body {
+  padding-right: 44px; /* ボタンの幅＋余裕分 */
+}
 
+@media (max-width: 768px) {
+  body {
+    padding-right: 0px; /* スマホでは不要 */
+  }
+}
 
 /* ===== 1) スマホ～タブレット最適化（<= 768px） ===== */
 @media (max-width: 768px){
@@ -1172,6 +1181,7 @@ font-weight: 700;
 
 }
 
+
 /* ===== 2) 狭幅スマホ（<= 480px） ===== */
 @media (max-width: 480px){
   .card-acc{ padding: 12px; border-radius: 12px; }
@@ -1184,19 +1194,9 @@ font-weight: 700;
 /* モーション軽減希望端末ではアニメ無効化 */
 @media (prefers-reduced-motion: reduce){
   .card-acc *{ transition:none !important; animation:none !important; }
-}
+}}
 
-/* === 右側固定メニューボタンと重ならないための余白 === */
-body {
-  padding-right: 44px; /* ボタンの幅＋余裕分 */
-}
 
-@media (max-width: 768px) {
-  body {
-    padding-right: 0px; /* スマホでは不要 */
-  }
-}
-}
 
 .payment-icons {
   display: flex;
