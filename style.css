@@ -336,9 +336,9 @@ h2::after {
     align-items: center;
     gap: 10px;
   }
-  .site-logo-header .logo-image{ height: 32px; }
+   .site-logo-header .logo-image{ height: 45px; }
   .site-logo-header .logo-text{
-    font-size: 16px;
+    font-size: 20px;
     color: #040404;
   }
     /* ヘッダーがfixedなので、本文が隠れないように上に余白を確保 */
