@@ -296,12 +296,8 @@ h2::after {
 /* === スマホ時はメニューボタンを右上固定に変更 === */
 @media (max-width: 768px) {
   .fixed-menu-btn {
-    position: fixed;
-    top: 15px;       /* 右上位置 */
-    right: 15px;
     width: 70px;     /* ボタン幅調整 */
     height: 55px;    /* 高さを小さくしてスマホで見やすく */
-    
     flex-direction: column;
     justify-content: center;
     background: rgba(255,255,255,0.3);
@@ -313,6 +309,51 @@ h2::after {
   }
     .fixed-menu-btn br {
     display: none;
+  }
+}
+
+/* ===== SPだけ：ヘッダーを上部固定、ロゴ＋MENUを横並び ===== */
+@media (max-width: 768px){
+  /* ヘッダーを常時上部に固定（本文と重ならないよう背景あり） */
+  .site-header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1100;
+    background: rgba(253, 253, 253, 0.7);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    height: 56px;                 /* ヘッダー高さ */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+
+  /* ロゴ行（今の .site-logo-header をバー内左寄せに） */
+  .site-logo-header{
+    position: static;             /* 既存の absolute を無効化 */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .site-logo-header .logo-image{ height: 32px; }
+  .site-logo-header .logo-text{
+    font-size: 16px;
+    color: #040404;
+  }
+    /* ヘッダーがfixedなので、本文が隠れないように上に余白を確保 */
+  body{ padding-top: 56px; }
+}
+
+
+/* iOSノッチ安全域（任意だが推奨） */
+@supports (padding-top: env(safe-area-inset-top)){
+  @media (max-width: 768px){
+    .site-header{
+      padding-top: env(safe-area-inset-top);
+      height: calc(56px + env(safe-area-inset-top));
+    }
+    body{ padding-top: calc(56px + env(safe-area-inset-top)); }
   }
 }
 
