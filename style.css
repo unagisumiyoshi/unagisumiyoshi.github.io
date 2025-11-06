@@ -166,7 +166,6 @@ body {
   color:  #971c06;
   margin-bottom: 15px;
 }
-
 .section h3 {
   font-family: 'Shippori Mincho B1', serif;
   font-size: 28px;
@@ -399,7 +398,6 @@ h2::after {
 
 
 .top-slideshow {
-  width: 180vm;
   height: 120vh;
   position: relative;
   overflow: hidden;
@@ -409,7 +407,6 @@ h2::after {
 
 @media (max-width: 768px) {
   .top-slideshow {
-  width: 150vm;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -641,7 +638,6 @@ h2::after {
   background-color: #b41f1f;
   color: #fff;
 }
-
 .site-header h2{
   font-size: 40px;
   margin-bottom: 30px;
@@ -1327,4 +1323,29 @@ body {
   height: auto;
   border-radius: 8px;
   margin: auto;
+}
+
+/* --- ページタイトル（ヘッダーの下に独立表示） --- */
+.page-header {
+  display: flex;
+  justify-content: center;
+  padding: 20px 12px 10px;
+}
+
+.page-title {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 33px;
+  color: #1c1c1c;
+  border-bottom: 3px solid #e07a3f;
+  display: inline-block;
+  padding-bottom: 6px;
+  scroll-margin-top: 70px; /* アンカー時に隠れ防止 */
+}
+
+/* スマホ用微調整 */
+@media (max-width: 768px){
+  .page-title {
+    font-size: 30px;
+    border-bottom-width: 2px;
+  }
 }
