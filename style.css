@@ -371,7 +371,7 @@ h2::after {
 
 
 .bottom-menu-overlay.open {
-  height: 50vh;
+  height: 45vh;
 }
 
 .bottom-menu-overlay ul {
@@ -1348,4 +1348,9 @@ body {
     font-size: 30px;
     border-bottom-width: 2px;
   }
+}
+
+.highlight {
+  color: #f31111; /* 赤系など好きな色に変更 */
+  font-weight: bold; /* 強調したい場合 */
 }
