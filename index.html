@@ -5,7 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>うなぎの宿 住吉｜長野市の老舗鰻料理店</title>
-<link href="style.css" rel="stylesheet"/>
+<link rel="preload" href="style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.min.css"></noscript>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&amp;family=Sawarabi+Mincho&amp;display=swap" rel="stylesheet"/>
 <!-- SEO対策 -->
 <meta content="長野市にある老舗のうなぎ料理店『うなぎの宿 住吉』。伝統の味と信州の自然が調和する、本格うなぎ料理をご堪能ください。" name="description"/>
@@ -135,85 +136,7 @@
 </img></picture></a>
 <p><a class="sdgs-link" href="https://nagano-sdgs.com/company/2293/profile/" target="_blank">当店の取り組みを見る</a></p>
 </section>
-<!-- スライドショー制御 -->
-<script>
 
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.2 };
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('show');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
-faders.forEach(fader => { appearOnScroll.observe(fader); });
-
-const slides = document.querySelectorAll('.slide');
-  const indicators = document.querySelectorAll('.indicators span');
-  let current = 0;
-  let interval = setInterval(showNextSlide, 5000);
-
-  function showNextSlide() {
-    slides[current].classList.remove('active');
-    indicators[current].classList.remove('active');
-
-    current = (current + 1) % slides.length;
-
-    slides[current].classList.add('active');
-    indicators[current].classList.add('active');
-  }
-
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-      clearInterval(interval);
-      slides[current].classList.remove('active');
-      indicators[current].classList.remove('active');
-
-      current = index;
-
-      slides[current].classList.add('active');
-      indicators[current].classList.add('active');
-
-      interval = setInterval(showNextSlide, 5000);
-    });
-  });
-// クリックで切り替えも対応
-indicators.forEach((indicator, index) => {
-  indicator.addEventListener('click', () => {
-    clearInterval(interval);
-    slides[current].classList.remove('active');
-    indicators[current].classList.remove('active');
-
-    current = index;
-
-    slides[current].classList.add('active');
-    indicators[current].classList.add('active');
-
-    interval = setInterval(showNextSlide, 5000);
-  });
-});
-const scrollFadeElements = document.querySelectorAll('.scroll-fade');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-      observer.unobserve(entry.target); // 一度だけ表示
-    }
-  });
-}, {
-  threshold: 0.2,
-});
-
-scrollFadeElements.forEach(el => observer.observe(el));
-
-window.addEventListener('load', () => {
-  const loader = document.getElementById('loading-overlay');
-  loader.classList.add('fade-out');
-});
-
-</script>
 </section>
 <footer class="site-footer">
 <div class="footer-inner">
@@ -221,5 +144,7 @@ window.addEventListener('load', () => {
 <p>長野県長野市箱清水2丁目19-31</p>
 <p>TEL：026-232-6304</p>
 </div>
-</footer><script src="main.js"></script></body>
+</footer>
+<script src="main.js"></script>
+</body>
 </html>
