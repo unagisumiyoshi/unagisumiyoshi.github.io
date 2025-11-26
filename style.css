@@ -15,7 +15,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('unagi5.JPG'); /* 背景画像パス */
+  background-image: url('picture/unagi5.JPG'); /* 背景画像パス */
   background-size: cover ;
   background-position: center 80px;
   background-repeat: no-repeat;

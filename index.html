@@ -5,8 +5,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>うなぎの宿 住吉｜長野市の老舗鰻料理店</title>
-<link rel="preload" href="style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="style.min.css"></noscript>
+<!-- <link rel="preload" href="style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.min.css"></noscript> -->
+<link rel="stylesheet" href="style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&amp;family=Sawarabi+Mincho&amp;display=swap" rel="stylesheet"/>
 <!-- SEO対策 -->
 <meta content="長野市にある老舗のうなぎ料理店『うなぎの宿 住吉』。伝統の味と信州の自然が調和する、本格うなぎ料理をご堪能ください。" name="description"/>
@@ -24,7 +26,7 @@
 <body>
 <div id="loading-overlay">
 <div class="loading-logo-container">
-<picture><source srcset="umaru.webp" type="image/webp"/><img alt="ロゴ" class="loading-logo" loading="lazy" src="umaru.png"/></picture>
+<picture><source srcset="picture/umaru.webp" type="image/webp"/><img alt="ロゴ" class="loading-logo" loading="lazy" src="picture/umaru.png"/></picture>
 <p class="loading-text">うなぎの宿 住吉</p>
 </div>
 </div>
@@ -43,21 +45,42 @@
 <br/><br/><br/><br/>
 <!-- トップスライドショー -->
 <section class="top-slideshow" id="top">
-<div class="slideshow">
-<picture><source srcset="gaikanall.webp" type="image/webp"/><img class="slide active" loading="lazy" src="gaikanall.JPG"/></picture>
-<picture><source srcset="kasane.webp" type="image/webp"/><img class="slide" loading="lazy" src="kasane.JPG">
-<picture><source srcset="kaiseki1.webp" type="image/webp"/><img class="slide" loading="lazy" src="kaiseki1.JPG"/></picture>
-<picture><source srcset="ikesu.webp" type="image/webp"/><img class="slide" loading="lazy" src="ikesu.jpg"/></picture>
-<picture><source srcset="ohiro.webp" type="image/webp"/><img class="slide" loading="lazy" src="ohiro.jpg"/></picture>
-</img></picture></div>
-<div class="indicators">
-<span class="active" data-slide="0"></span>
-<span data-slide="1"></span>
-<span data-slide="2"></span>
-<span data-slide="3"></span>
-<span data-slide="4"></span>
-</div>
+  <div class="slideshow">
+    <picture>
+      <source srcset="picture/gaikanall.webp" type="image/webp" />
+      <img class="slide active" src="picture/gaikanall.JPG" loading="eager" alt="外観全体">
+    </picture>
+
+    <picture>
+      <source srcset="picture/kasane.webp" type="image/webp" />
+      <img class="slide" src="picture/kasane.JPG" loading="lazy" alt="うな重の写真">
+    </picture>
+
+    <picture>
+      <source srcset="picture/kaiseki1.webp" type="image/webp" />
+      <img class="slide" src="picture/kaiseki1.JPG" loading="lazy" alt="会席料理1">
+    </picture>
+
+    <picture>
+      <source srcset="picture/ikesu.webp" type="image/webp" />
+      <img class="slide" src="picture/ikesu.jpg" loading="lazy" alt="いけす">
+    </picture>
+
+    <picture>
+      <source srcset="picture/ohiro.webp" type="image/webp" />
+      <img class="slide" src="picture/ohiro.jpg" loading="lazy" alt="お座敷広間">
+    </picture>
+  </div>
+
+  <div class="indicators">
+    <span class="active" data-slide="0"></span>
+    <span data-slide="1"></span>
+    <span data-slide="2"></span>
+    <span data-slide="3"></span>
+    <span data-slide="4"></span>
+  </div>
 </section>
+
 <!-- 下から出るメニュー -->
 <div id="menu-placeholder"></div>
 <section class="section fade-in" id="news">
@@ -132,7 +155,7 @@
     地域と環境に配慮した取り組みを行っております。
   </br></p>
 <a href="https://nagano-sdgs.com" target="_blank">
-<picture><source srcset="sdgs.webp" type="image/webp"/><img alt="SDGsロゴ" src="sdgs.jpg" style="width: 100px; margin: 10px;">
+<picture><source srcset="picture/sdgs.webp" type="image/webp"/><img alt="SDGsロゴ" src="picture/sdgs.jpg" style="width: 100px; margin: 10px;">
 </img></picture></a>
 <p><a class="sdgs-link" href="https://nagano-sdgs.com/company/2293/profile/" target="_blank">当店の取り組みを見る</a></p>
 </section>
@@ -145,6 +168,6 @@
 <p>TEL：026-232-6304</p>
 </div>
 </footer>
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 </body>
 </html>
