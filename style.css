@@ -1307,3 +1307,51 @@ body {
   color: #f31111; /* 赤系など好きな色に変更 */
   font-weight: bold; /* 強調したい場合 */
 }
+
+/* ===========================
+   店舗情報ページの共通スタイル
+=========================== */
+
+/* 見出し h3 のスタイル */
+.shop-overview h3,
+.shop-access h3,
+.shop-rooms h3,
+.shop-payment h3,
+.shop-message h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #9d0808;  /* 赤で和風アクセント */
+  font-weight: 700;
+}
+
+/* テキスト */
+.shop-overview p,
+.shop-access p,
+.shop-rooms p,
+.shop-payment p,
+.shop-message p {
+  line-height: 1.9;
+  font-size: 1rem;
+  color: #050504;  /* 読みやすい濃い黒 */
+  margin: 8px 0;
+}
+
+/* マップを中央寄せ＋余白 */
+.shop-access .map {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.shop-access iframe {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* 挨拶（shop-message）だけ少し柔らかい感じに */
+.shop-message p {
+  font-size: 1.05rem;
+  line-height: 1.95;
+}
