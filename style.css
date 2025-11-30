@@ -585,7 +585,7 @@ h2::after {
   overflow: hidden; /* 角の丸みを一括制御 */
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto 40px;
+  margin: -60px auto 40px;
 }
 
 .menu-category-nav .tab-btn {
@@ -1070,7 +1070,7 @@ h2::after {
   border:1px solid #e6e6e6;
   border-radius:14px;
   background:#fff;
-  box-shadow:0 6px 20px rgba(0,0,0,.06);
+  box-shadow:0 6px 20px rgba(183, 14, 14, 0.06);
   padding:12px;
   border-bottom:none !important;
 }
@@ -1282,7 +1282,7 @@ body {
 .page-header {
   display: flex;
   justify-content: center;
-  padding: 20px 12px 10px;
+  padding: 20px 12px 0;
 }
 
 .page-title {
