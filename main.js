@@ -288,6 +288,47 @@ function setupLoadingOverlay() {
 }
 
 // =============================
+// お品書きメニュー画像モーダル
+// =============================
+function setupMenuImageModal() {
+  const modal = document.getElementById('menu-image-modal');
+  const modalImg = document.getElementById('menu-image-modal-img');
+  const closeBtn = document.querySelector('.menu-image-modal-close');
+  if (!modal || !modalImg || !closeBtn) return;
+
+  // サムネを全部拾う
+  const thumbs = document.querySelectorAll('.menu-thumb');
+  if (!thumbs.length) return;
+
+  thumbs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const fullSrc = btn.dataset.full;
+      const altText = btn.dataset.alt || '';
+      if (!fullSrc) return;
+
+      modalImg.src = fullSrc;
+      modalImg.alt = altText;
+      modal.classList.add('open');
+    });
+  });
+
+  // 閉じる（×ボタン）
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('open');
+    modalImg.src = '';
+  });
+
+  // オーバーレイ部分タップでも閉じる
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('open');
+      modalImg.src = '';
+    }
+  });
+}
+
+
+// =============================
 // イベント登録
 // =============================
 window.addEventListener('DOMContentLoaded', () => {
@@ -309,6 +350,7 @@ window.addEventListener('DOMContentLoaded', () => {
   setupUnagiToggle();
   setupSmoothScroll();
   setupBackToTop();
+  setupMenuImageModal();
 });
 
 window.addEventListener('load', () => {
