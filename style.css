@@ -1356,3 +1356,48 @@ body {
   font-size: 1.05rem;
   line-height: 1.95;
 }
+
+/* --- ページトップへ戻るボタン --- */
+.back-to-top-btn {
+  position: fixed;
+  right: 16px;
+  bottom: 80px; /* 固定MENUやフッターと少し距離をあける */
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid #e07a3f;          /* 既存のアクセントカラーに合わせる */
+  background: rgba(0, 0, 0, 0.75);     /* 和風の落ち着いた黒背景 */
+  color: #fdf6e8;                      /* 生成り系の文字色に合わせる想定 */
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 900;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+
+  opacity: 0;                          /* 初期は非表示 */
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.back-to-top-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    right: 12px;
+    bottom: 88px; /* スマホで固定MENUボタンと重なりにくく少し上に */
+  }
+}
+
+/* PC では非表示（スマホ専用ボタンにする） */
+@media (min-width: 769px) {
+  .back-to-top-btn {
+    display: none;
+  }
+}

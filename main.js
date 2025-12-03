@@ -248,6 +248,36 @@ function setupSmoothScroll() {
 }
 
 // =============================
+// ページトップへ戻るボタン
+// =============================
+function setupBackToTop() {
+  const btn = document.querySelector('.back-to-top-btn');
+  if (!btn) return; // ボタンがないページでは何もしない
+
+  const toggle = () => {
+    if (window.scrollY > 300) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  };
+
+  // スクロールで表示／非表示切り替え
+  window.addEventListener('scroll', toggle, { passive: true });
+  // 読み込み直後にも一度チェック
+  toggle();
+
+  // クリックでページトップへスムーススクロール
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// =============================
 // ローディングオーバーレイ
 // =============================
 function setupLoadingOverlay() {
@@ -278,6 +308,7 @@ window.addEventListener('DOMContentLoaded', () => {
   setupNewsToggle();
   setupUnagiToggle();
   setupSmoothScroll();
+  setupBackToTop();
 });
 
 window.addEventListener('load', () => {
