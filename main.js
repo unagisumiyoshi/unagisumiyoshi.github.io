@@ -43,7 +43,7 @@ function setupFadeIn() {
   const faders = document.querySelectorAll('.fade-in');
   if (!faders.length || !('IntersectionObserver' in window)) return;
 
-  const appearOptions = { threshold: 0.2 };
+  const appearOptions = { threshold: 0.05 };
 
   const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -70,7 +70,7 @@ function setupScrollFade() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.05 });
 
   elements.forEach(el => observer.observe(el));
 }
