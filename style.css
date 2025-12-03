@@ -1401,3 +1401,104 @@ body {
     display: none;
   }
 }
+
+/* === メニュー用サムネ：テキスト中央のまま横に画像を付ける === */
+
+
+
+/* テキスト部分は固定幅の“中央ボックス”にする */
+.menu-with-thumb .menu-text {
+  width: 260px;              /* ← ここが超重要（テキスト範囲を固定） */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 既存のカラムをそのまま維持 */
+.menu-item-name {
+  width: 150px;
+  text-align: left;
+}
+
+.menu-item-price {
+  width: 80px;
+  text-align: right;
+}
+
+/* サムネボタン */
+.menu-thumb {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.menu-thumb picture,
+.menu-thumb img {
+  display: block;
+}
+
+.menu-thumb img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* スマホは縦並びにしてキレイに */
+@media (max-width: 768px) {
+
+  .menu-with-thumb .menu-text {
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .menu-thumb img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* === 拡大画像モーダル === */
+
+.menu-image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;              /* 初期は非表示 */
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+}
+
+.menu-image-modal.open {
+  display: flex;
+}
+
+.menu-image-modal-inner {
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+}
+
+.menu-image-modal-inner img {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+}
+
+.menu-image-modal-close {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  color: #fdf6e8;
+  font-size: 28px;
+  cursor: pointer;
+}

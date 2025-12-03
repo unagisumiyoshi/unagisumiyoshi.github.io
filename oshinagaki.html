@@ -44,9 +44,103 @@
 </div>
 <h3>うな重</h3>
 <ul class="menu-list">
-<li> <span class="menu-item-name">小並</span><span class="menu-item-price">3,465円</span></li>
-<li> <span class="menu-item-name">並</span><span class="menu-item-price">4,290円</span></li>
-<li> <span class="menu-item-name">上</span><span class="menu-item-price">5,060円</span></li>
+<li class="menu-with-thumb">
+  <div class="menu-text">
+    <span class="menu-item-name">小並</span>
+    <span class="menu-item-price">3,465円</span>
+  </div>
+  <button
+    type="button"
+    class="menu-thumb"
+    data-full="picture/nami.JPG"
+    data-alt="小並（うな重）の写真">
+    <picture>
+      <source srcset="picture/nami.webp" type="image/webp">
+      <img src="picture/nami.JPG" alt="小並（うな重）の写真">
+    </picture>
+  </button>
+  </li>
+  <li class="menu-with-thumb">
+  <div class="menu-text">
+    <span class="menu-item-name">並</span>
+    <span class="menu-item-price">4,290円</span>
+  </div>
+  <button
+    type="button"
+    class="menu-thumb"
+    data-full="picture/nami.JPG"
+    data-alt="並（うな重）の写真">
+    <picture>
+      <source srcset="picture/nami.webp" type="image/webp">
+      <img src="picture/nami.JPG" alt="並（うな重）の写真">
+    </picture>
+  </button>
+  </li>
+    </li>
+  <li class="menu-with-thumb">
+  <div class="menu-text">
+    <span class="menu-item-name">上</span>
+    <span class="menu-item-price">5,060円</span>
+  </div>
+  <button
+    type="button"
+    class="menu-thumb"
+    data-full="picture/nami.JPG"
+    data-alt="上の写真">
+    <picture>
+      <source srcset="picture/nami.webp" type="image/webp">
+      <img src="picture/nami.JPG" alt="上（うな重）の写真">
+    </picture>
+  </button>
+  </li>
+    <li class="menu-with-thumb">
+  <div class="menu-text">
+    <span class="menu-item-name">特上</span>
+    <span class="menu-item-price">5,885円</span>
+  </div>
+  <button
+    type="button"
+    class="menu-thumb"
+    data-full="picture/nami.JPG"
+    data-alt="特上の写真">
+    <picture>
+      <source srcset="picture/nami.webp" type="image/webp">
+      <img src="picture/nami.JPG" alt="特上（うな重）の写真">
+    </picture>
+  </button>
+  </li>
+    <li class="menu-with-thumb">
+  <div class="menu-text">
+    <span class="menu-item-name">かさね重</span>
+    <span class="menu-item-price">7,480円</span>
+  </div>
+  <button
+    type="button"
+    class="menu-thumb"
+    data-full="picture/kasane.JPG"
+    data-alt="かさねの写真">
+    <picture>
+      <source srcset="picture/kasane.webp" type="image/webp">
+      <img src="picture/kasane.JPG" alt="かさねの写真">
+    </picture>
+  </button>
+  </li>
+    <li class="menu-with-thumb">
+  <div class="menu-text">
+    <span class="menu-item-name">うなぎまぶし</span>
+    <span class="menu-item-price">4,180円</span>
+  </div>
+  <button
+    type="button"
+    class="menu-thumb"
+    data-full="picture/mabuchi.jpeg"
+    data-alt="うなぎまぶしの写真">
+    <picture>
+      <source srcset="picture/mabuchi.webp" type="image/webp">
+      <img src="picture/mabuchi.jpeg" alt="うなぎまぶしの写真">
+    </picture>
+  </button>
+  </li>
 <li> <span class="menu-item-name">特上</span><span class="menu-item-price">5,885円</span></li>
 <li> <span class="menu-item-name">かさね重</span><span class="menu-item-price">7,480円</span></li>
 <li> <span class="menu-item-name">うなぎまぶし</span><span class="menu-item-price">4,180円</span></li>
@@ -311,6 +405,13 @@
 </div>
 </footer>
 <script src="main.js"></script>
+<!-- メニュー画像拡大用モーダル -->
+<div class="menu-image-modal" id="menu-image-modal">
+  <div class="menu-image-modal-inner">
+    <button type="button" class="menu-image-modal-close" aria-label="閉じる">×</button>
+    <img src="" alt="" id="menu-image-modal-img">
+  </div>
+</div>
 <!-- ページトップへ戻るボタン -->
 <button type="button" class="back-to-top-btn" aria-label="ページの先頭へ戻る">
   ▲
