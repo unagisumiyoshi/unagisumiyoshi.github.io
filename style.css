@@ -1435,7 +1435,7 @@ body {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
@@ -1443,7 +1443,7 @@ body {
 @media (max-width: 768px) {
 
   .menu-with-thumb .menu-text {
-    width: 50%;
+    width: 100%;
     justify-content: center;
     gap: 16px;
   }
@@ -1452,6 +1452,17 @@ body {
     width: 70px;
     height: 70px;
   }
+  .menu-item-name {
+  width: 150px;
+  
+  
+}
+
+.menu-item-price {
+  width: 80px;
+ 
+}
+
 }
 
 /* === 拡大画像モーダル === */
