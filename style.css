@@ -851,19 +851,7 @@ h2::after {
   }
 }
 
-.menu-item-name {
-  display: inline-block;
-  width: 200px;         /* ← ここで左カラムの幅を固定 */
-  text-align: left;     /* 左揃え（頭文字揃う） */
-  white-space: nowrap;
-}
 
-.menu-item-price {
-  display: inline-block;
-  width: 80px;          /* ← ここで右カラム幅固定（円揃え） */
-  text-align: right;    /* 右揃え（円が右端に揃う） */
-  white-space: nowrap;
-}
 
 
 @media (max-width: 768px) {
@@ -1408,7 +1396,7 @@ body {
 
 /* テキスト部分は固定幅の“中央ボックス”にする */
 .menu-with-thumb .menu-text {
-  width: 260px;              /* ← ここが超重要（テキスト範囲を固定） */
+  width: 300px;              /* ← ここが超重要（テキスト範囲を固定） */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1416,13 +1404,18 @@ body {
 
 /* 既存のカラムをそのまま維持 */
 .menu-item-name {
-  width: 150px;
+  width: 250px;
   text-align: left;
+   white-space: nowrap;
+   display: inline-block;
+  
 }
 
 .menu-item-price {
-  width: 80px;
+  width: 150px;
   text-align: right;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 /* サムネボタン */
@@ -1450,7 +1443,7 @@ body {
 @media (max-width: 768px) {
 
   .menu-with-thumb .menu-text {
-    width: 100%;
+    width: 50%;
     justify-content: center;
     gap: 16px;
   }
