@@ -26,7 +26,9 @@
 <button class="tab-btn" data-target="unagi">うなぎ料理</button>
 <button class="tab-btn" data-target="gohan">ご飯物各種</button>
 <button class="tab-btn" data-target="ippin">一品料理</button>
-<button class="tab-btn" data-target="course">その他/コース</button>
+<button class="tab-btn" data-target="other">ふぐ/スッポン</button>
+<button class="tab-btn" data-target="course">コース</button>
+<button class="tab-btn" data-target="drink">お飲み物</button>
 <button class="tab-btn" data-target="takeout">お持ち帰り</button>
 <button class="tab-btn" data-target="delivery">出前</button>
 </nav>
@@ -650,53 +652,397 @@ data-alt="サラダの写真">
 
 <h3>ご飯・つけもの・汁物</h3>
 <ul class="menu-list">
-<li> <span class="menu-item-name">ご飯</span><span class="menu-item-price">220円</span></li>
-<li> <span class="menu-item-name">つけもの</span><span class="menu-item-price">440円</span></li>
-<li> <span class="menu-item-name">赤だしなめこ汁</span><span class="menu-item-price">385円</span></li>
-<li> <span class="menu-item-name">わかめみそ汁</span><span class="menu-item-price">165円</span></li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">ごはん</span>
+<span class="menu-item-price">220円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="ごはんの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="ごはんの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">つけもの</span>
+<span class="menu-item-price">440９円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="つけものの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="つけものの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">赤だしなめこ汁</span>
+<span class="menu-item-price">385円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="赤だしなめこ汁の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="赤だしなめこ汁の写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">わかめのみそ汁</span>
+<span class="menu-item-price">165円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="わかめのみそ汁の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="わかめのみそ汁の写真">
+</picture>
+</button>
+</li>
+
 
 </ul>
 <h3>酢の物</h3>
 <ul class="menu-list">
-<li> <span class="menu-item-name">おまかせ酢の物</span><span class="menu-item-price">605円</span></li>
-<li> <span class="menu-item-name">わかめ</span><span class="menu-item-price">495円</span></li>
-<li> <span class="menu-item-name">貝のぬた</span><span class="menu-item-price">715円</span></li>
+  <li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">おまかせ酢の物</span>
+<span class="menu-item-price">605円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="おまかせ酢の物の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="おまかせ酢の物の写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">わかめ</span>
+<span class="menu-item-price">495円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="わかめの酢の物の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="わかめの酢の物の写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">貝のぬた</span>
+<span class="menu-item-price">715円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="貝のぬたの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="貝のぬたの写真">
+</picture>
+</button>
+</li>
 
 </ul>
 <h3>お造り</h3>
 <ul class="menu-list">
-<li> <span class="menu-item-name">マグロ</span><span class="menu-item-price">1,540円</span></li>
-<li> <span class="menu-item-name">カンパチ・マグロ盛</span><span class="menu-item-price">1,540円</span></li>
-<li> <span class="menu-item-name">あまえび</span><span class="menu-item-price">1,045円</span></li>
-<li> <span class="menu-item-name">さしみ盛り合わせ</span><span class="menu-item-price">2,640円</span></li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">マグロ</span>
+<span class="menu-item-price">1,540円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="マグロの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="マグロの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">カンパチ・マグロ盛</span>
+<span class="menu-item-price">1,540円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="カンパチ・マグロ盛の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="カンパチ・マグロ盛の写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">あまえび</span>
+<span class="menu-item-price">1,045円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="あまえびの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="あまえびの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">さしみ盛り合わせ</span>
+<span class="menu-item-price">2,640円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/sashimi.JPG"
+data-alt="さしみ盛り合わせの写真">
+<picture>
+<source srcset="picture/sashimi.webp" type="image/webp">
+<img src="picture/sashimi.JPG" alt="さしみ盛り合わせの写真">
+</picture>
+</button>
+</li>
 
 </ul>
 
 <h3>一品料理</h3>
 <ul class="menu-list">
-<li> <span class="menu-item-name">えだ豆</span><span class="menu-item-price">275円</span></li>
-<li> <span class="menu-item-name">とりわさ</span><span class="menu-item-price">605円</span></li>
-<li> <span class="menu-item-name">馬刺し</span><span class="menu-item-price">1,100円</span></li>
-<li> <span class="menu-item-name">きのこチーズ焼き</span><span class="menu-item-price">770円</span></li>
-<li> <span class="menu-item-name">茶わん蒸し</span><span class="menu-item-price">605円</span></li>
-<li> <span class="menu-item-name">焼きとり</span><span class="menu-item-price">715円</span></li>
-<li> <span class="menu-item-name">梅どり</span><span class="menu-item-price">715円</span></li>
-<li> <span class="menu-item-name">岩魚塩焼</span><span class="menu-item-price">1,100円</span></li>
-<li> <span class="menu-item-name">あゆ塩焼</span><span class="menu-item-price">1,100円</span></li>
-<li> <span class="menu-item-name">カンパチカマ焼き</span><span class="menu-item-price">1,320円</span></li>
-<li> <span class="menu-item-name">沢がにのから揚げ</span><span class="menu-item-price">660円</span></li>
-<li> <span class="menu-item-name">地ばちの子</span><span class="menu-item-price">770円</span></li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">えだまめ</span>
+<span class="menu-item-price">275円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="えだまめの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="えだまめの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">とりわさ</span>
+<span class="menu-item-price">605円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="とりわさの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="とりわさの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">馬刺し</span>
+<span class="menu-item-price">1,100円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="馬刺しの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="馬刺しの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">きのこチーズ焼き</span>
+<span class="menu-item-price">770円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="きのこチーズ焼きの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="きのこチーズ焼きの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">茶わん蒸し</span>
+<span class="menu-item-price">605円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="茶わん蒸しの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="茶わん蒸しの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">焼きとり</span>
+<span class="menu-item-price">715円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="焼きとりの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="焼きとりの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">梅どり</span>
+<span class="menu-item-price">715円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="梅どりの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="梅どりの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">岩魚塩焼き</span>
+<span class="menu-item-price">1,100円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="岩魚塩焼きの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="岩魚塩焼きの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">あゆ塩焼き</span>
+<span class="menu-item-price">1,100円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/ayu.JPG"
+data-alt="あゆ塩焼きの写真">
+<picture>
+<source srcset="picture/ayu.webp" type="image/webp">
+<img src="picture/ayu.JPG" alt="あゆ塩焼きの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">沢がにのから揚げ</span>
+<span class="menu-item-price">660円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="沢がにのからあげの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="沢がにの唐揚げの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">地ばちの子</span>
+<span class="menu-item-price">770円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="地ばちの子の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="地ばちの子の写真">
+</picture>
+</button>
+</li>
 
 </ul>
 <p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込です</p>
 
 </section>
-<section class="menu-tab" id="course">
-  <h2>ふぐ・スッポン/宴会・コース料理</h2>
-
+<section class="menu-tab active" id="other">
+<h2>ふぐ/スッポン料理</h2>
 <h3>ふぐ料理</h3>
 <ul class="menu-list">
-<li> <span class="menu-item-name">ふぐさし</span><span class="menu-item-price">4,730円</span></li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">ふぐさし</span>
+<span class="menu-item-price">4,730円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="ふぐさしの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="ふぐさしの写真">
+</picture>
+</button>
+</li>
 <li> <span class="menu-item-name">ふぐ鍋</span><span class="menu-item-price">4,730円</span></li>
 <li> <span class="menu-item-name">雑炊セット</span><span class="menu-item-price">605円</span></li>
 <li> <span class="menu-item-name">ふぐコース</span><span class="menu-item-price">10,780円</span></li>
@@ -707,6 +1053,10 @@ data-alt="サラダの写真">
 <li> <span class="menu-item-name">スッポン鍋コース</span><span class="menu-item-price">13,200円</span></li>
 
 </ul>
+</section>
+<section class="menu-tab" id="course">
+<h2>コース料理</h2>
+
 <h3>宴会/コース料理</h3>
 <ul class="menu-list">
 <li> <span class="menu-item-name">会席料理</span><span class="menu-item-price">4,400円～</span></li>
@@ -714,6 +1064,7 @@ data-alt="サラダの写真">
 <li> <span class="menu-item-name">うなぎづくしコース</span><span class="menu-item-price">10,670円</span></li>
 <li> <span class="menu-item-name">ふぐコース</span><span class="menu-item-price">10,780円</span></li>
 <li> <span class="menu-item-name">スッポン鍋コース</span><span class="menu-item-price">13,200円</span></li>
+
 
 
 <p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込です</p>
@@ -729,23 +1080,224 @@ data-alt="サラダの写真">
 </ul>
 </div>
 </section>
+<section class="menu-tab" id="drink">
+<h2>お飲み物</h2>
+<h3>アルコール</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">生ビール（中）</span><span class="menu-item-price">660円</span></li>
+<li> <span class="menu-item-name">生ビール（小）</span><span class="menu-item-price">440円</span></li>
+<li> <span class="menu-item-name">瓶ビール</span><span class="menu-item-price">円</span></li>
+<li> <span class="menu-item-name">ハイボール</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">日本酒　松尾</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">生酒　松尾</span><span class="menu-item-price">770円</span></li>
+<li> <span class="menu-item-name">ふぐひれ酒</span><span class="menu-item-price">770円</span></li>
+<li> <span class="menu-item-name">むぎ焼酎　いいちこ</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">いも焼酎　深海うなぎ</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">ウーロンハイ</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">緑茶ハイ</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">レモンサワー</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">グレープフルーツサワー</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">男梅サワー</span><span class="menu-item-price">550円</span></li>
+<li> <span class="menu-item-name">サントリーオールフリー</span><span class="menu-item-price">495円</span></li>
+<p style="font-size: 14px; margin-top: 1em;">※ グラス提供１杯あたりの価格です</p>
+</ul>
+<h3>ワイン</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">五一ワイン　赤</span><span class="menu-item-price">660円</span></li>
+<li> <span class="menu-item-name">五一ワイン　白</span><span class="menu-item-price">440円</span></li>
+<li> <span class="menu-item-name">ノンアル<br>スパークリングワイン</span><span class="menu-item-price">円</span></li>
+</ul>
+<h3>ソフトドリンク</h3>
+<ul class="menu-list">
+<li> <span class="menu-item-name">ウーロン茶</span><span class="menu-item-price">2,754円</span></li>
+<li> <span class="menu-item-name">コーラ</span><span class="menu-item-price">3,402円</span></li>
+<li> <span class="menu-item-name">サイダー</span><span class="menu-item-price">4,212円</span></li>
+<li> <span class="menu-item-name">オレンジジュース</span><span class="menu-item-price">4,968円</span></li>
+<li> <span class="menu-item-name">コーヒー</span><span class="menu-item-price">5,778円</span></li>
+
+</ul>
+</section>
 <section class="menu-tab" id="takeout">
 <h2>お持ち帰り</h2>
 <h3>お持ち帰り</h3>
 <ul class="menu-list">
-<li> <span class="menu-item-name">蒲焼一串</span><span class="menu-item-price">2,376円</span></li>
-<li> <span class="menu-item-name">白焼一串</span><span class="menu-item-price">2,376円</span></li>
-<li> <span class="menu-item-name">大串弁当</span><span class="menu-item-price">2,592円</span></li>
-<li> <span class="menu-item-name">小並弁当</span><span class="menu-item-price">3,402円</span></li>
-<li> <span class="menu-item-name">並弁当</span><span class="menu-item-price">4,212円</span></li>
-<li> <span class="menu-item-name">上弁当</span><span class="menu-item-price">4,968円</span></li>
-<li> <span class="menu-item-name">特上弁当</span><span class="menu-item-price">5,778円</span></li>
-<li> <span class="menu-item-name">うなぎまぶし弁当</span><span class="menu-item-price">4,104円</span></li>
+  <li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">蒲焼1一串</span>
+<span class="menu-item-price">2,376円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="蒲焼TO写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="蒲焼TOのの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">白焼き一串</span>
+<span class="menu-item-price">2,376円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="白焼きTO写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="白焼きTOの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">大串弁当</span>
+<span class="menu-item-price">2,592円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="大串弁当の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="大串弁当の写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">小並弁当</span>
+<span class="menu-item-price">3,402円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="小並弁当の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="小並弁当の写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">並弁当</span>
+<span class="menu-item-price">4,212円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="並弁当の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="並弁当の写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">上弁当</span>
+<span class="menu-item-price">4,968円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="上弁当の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="上弁当の写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">特上弁当</span>
+<span class="menu-item-price">5,778円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="特上弁当の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="特上弁当の写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">うなぎまぶし弁当</span>
+<span class="menu-item-price">4,104円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="うなぎまぶし弁当の写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="うなぎまぶし弁当の写真">
+</picture>
+</button>
+</li>
 <li> <span class="menu-item-name">ごはん大盛り</span><span class="menu-item-price">162円</span></li>
-<li> <span class="menu-item-name">きも焼き</span><span class="menu-item-price">756円</span></li>
-<li> <span class="menu-item-name">うなぎの骨せんべい</span><span class="menu-item-price">648円</span></li>
-<li> <span class="menu-item-name">冷凍きざみうなぎ<br/>（真空パック）</span><span class="menu-item-price">1,620円</span></li>
-
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">きも焼き</span>
+<span class="menu-item-price">756円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="きも焼きTOの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="きも焼きTOの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">うなぎの骨せんべい</span>
+<span class="menu-item-price">648円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="うなぎの骨せんべいの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="うなぎの骨せんべいの写真">
+</picture>
+</button>
+</li>
+<li class="menu-with-thumb">
+<div class="menu-text">
+<span class="menu-item-name">冷凍きざみうなぎ<br>真空パック</span>
+<span class="menu-item-price">1,620円</span>
+</div>
+<button
+type="button"
+class="menu-thumb"
+data-full="picture/mama.JPG"
+data-alt="きざみうなぎの写真">
+<picture>
+<source srcset="picture/mama.webp" type="image/webp">
+<img src="picture/mama.JPG" alt="きざみうなぎの写真">
+</picture>
+</button>
+</li>
 <p style="font-size: 14px; margin-top: 1em;">※ 表示価格は税込です</p>
 </ul></section>
 <section class="menu-tab" id="delivery">

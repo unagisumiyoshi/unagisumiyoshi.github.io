@@ -612,6 +612,9 @@ h2::after {
   .menu-category-nav .tab-btn {
     flex: 1 1 45%; /* 2列になるように幅指定 */
     border-bottom: 1px solid #b41f1f;
+    font-size: 15px;      /* ← 文字小さく */
+    padding: 8px 0; 
+
   }
   .menu-category-nav .tab-btn:nth-child(2n) {
     border-right: none; /* 右端の列は線を消す */
@@ -1453,14 +1456,11 @@ body {
     height: 70px;
   }
   .menu-item-name {
-  width: 150px;
-  
-  
+  width: 160px;
 }
 
 .menu-item-price {
-  width: 80px;
- 
+  width: 90px;
 }
 
 }
