@@ -1060,7 +1060,7 @@ h2::after {
 .card-acc {
   border:1px solid #e6e6e6;
   border-radius:14px;
-  background:#fff;
+  background:#ffffff;
   box-shadow:0 6px 20px rgba(183, 14, 14, 0.06);
   padding:12px;
   border-bottom:none !important;
@@ -1107,6 +1107,117 @@ font-weight: 700;
   line-height:1.7;
   margin-top:.4rem;
 }
+
+/* === 宴会コース内の小ブロック（デザイン強め版） === */
+
+/* details 全体はそのままでOK（必要なら少しだけ調整） */
+.card-acc details {
+  margin-top: .6rem;
+  border-top: 1px dashed #e6e6e6;
+  padding-top: .6rem;
+}
+
+/* 1コース分の箱 */
+.card-acc .course-block {
+  position: relative;
+  margin-top: .8rem;
+  padding: .85rem 1rem .95rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fbf4e6 0%, #f7eee1 45%, #fbf4e6 100%);
+  border: 1px solid rgba(180, 31, 31, 0.22);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* 左側の“縦ライン”＋和柄っぽいニュアンス */
+.card-acc .course-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 4px;
+  background: linear-gradient(to bottom, #e07a3f, #b41f1f);
+  opacity: 0.9;
+}
+
+/* 右上の折り返し風ワンポイント */
+.card-acc .course-block::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  top: -18px;
+  width: 40px;
+  height: 40px;
+  background: rgba(180, 31, 31, 0.08);
+  transform: rotate(45deg);
+}
+
+/* 価格ラベル（〇4,400円など） */
+.card-acc .course-title {
+  display: inline-block;
+  position: relative;
+  margin-left: .9rem;   /* 縦ライン分を少し開ける */
+  padding: .12rem .9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(180, 31, 31, 0.6);
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: .08em;
+}
+
+/* タイトル左に小さな印 */
+.card-acc .course-title::before {
+  content: "◆";
+  margin-right: .35rem;
+  font-size: .7rem;
+}
+
+/* コース内容 */
+.card-acc .course-body {
+  display: block;
+  margin-top: .35rem;
+  margin-left: 1.1rem;  /* 縦ライン＋タイトル揃え */
+  font-size: .9rem;
+  line-height: 1.8;
+}
+
+/* 強調用 .highlight はそのまま活かす前提 */
+.card-acc .course-body .highlight {
+  font-weight: 600;
+  border-bottom: 1px solid rgba(180, 31, 31, 0.5);
+}
+
+/* 補足（※時季により〜 など） */
+.card-acc .course-note {
+  display: block;
+  margin-top: .6rem;
+  font-size: .8rem;
+  color: #666;
+}
+
+/* スマホ用に少し軽めにする */
+@media (max-width: 768px) {
+  .card-acc .course-block {
+    margin-top: .6rem;
+    padding: .7rem .8rem .8rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-acc .course-title {
+    font-size: .85rem;
+    padding: .08rem .75rem;
+  }
+
+  .card-acc .course-body {
+    font-size: .8rem;
+    line-height: 1.7;
+    margin-left: 1rem;
+  }
+}
+
 
 
 .card-acc .photo {
