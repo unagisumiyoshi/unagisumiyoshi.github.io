@@ -725,52 +725,7 @@ h2::after {
 
   
 
-/* 高級感・スマートな表示強化 */
-.swiper {
-  width: 100%;
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 20px 0;
-  position: relative;
-}
 
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* 矢印スタイル */
-.swiper-button-prev,
-.swiper-button-next {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  color: #e07a3f;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 20px;
-  font-weight: bold;
-   color: #e07a3f;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-  .swiper-slide {
-    width: 80%;
-  }
-}
 
 
 
