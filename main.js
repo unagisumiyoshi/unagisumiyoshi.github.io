@@ -124,11 +124,11 @@ function setupSlideshow() {
     });
   });
 
-  const container = document.querySelector('.top-slideshow');
+  /*const container = document.querySelector('.top-slideshow');
   if (container) {
     container.addEventListener('mouseenter', stopAuto);
     container.addEventListener('mouseleave', startAuto);
-  }
+  }*/
 }
 
 // =============================
@@ -177,26 +177,7 @@ function setupMenuTabs() {
   });
 }
 
-// =============================
-// Swiper（お品書きの写真スライダー）
-// =============================
-function setupSwiperSlider() {
-  if (typeof Swiper === 'undefined') return;
-  const swiperEl = document.querySelector('.swiper');
-  if (!swiperEl) return;
-  if (swiperEl.swiper) return; // すでに初期化済みなら何もしない
 
-  new Swiper('.swiper', {
-    loop: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-}
 
 // =============================
 // ニュース開閉（news.html）
@@ -327,6 +308,71 @@ function setupMenuImageModal() {
   });
 }
 
+// =========================
+// トップページ用 お知らせ読み込み
+// =========================
+function loadTopNews() {
+  const container = document.getElementById('top-news-list');
+  if (!container) return; // newsセクションがないページでは何もしない
+
+  fetch('news.html')
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+
+      // news.html 内の .news-item を全部取る
+      const items = Array.from(doc.querySelectorAll('#top-news .news-item'));
+
+      // 0件ならメッセージ出して終了
+      if (!items.length) {
+        container.textContent = 'ただいまお知らせはございません。';
+        return;
+      }
+
+      // 最新3件だけ使う（必要なら2件に減らしてOK）
+      const latest = items.slice(0, 3);
+
+      // UL を作る
+      const ul = document.createElement('ul');
+      ul.className = 'top-news-ul';
+
+      latest.forEach(item => {
+        const titleEl = item.querySelector('.news-title');
+        if (!titleEl) return;
+
+        const fullText = titleEl.textContent.trim();
+
+        // 「2025/10/26 … タイトル」みたいな形式を分割
+        const [datePart, titlePart] = fullText.split('…');
+        const dateText = (datePart || '').trim();
+        const titleText = (titlePart || fullText).trim();
+
+        const li = document.createElement('li');
+
+        const dateSpan = document.createElement('span');
+        dateSpan.className = 'top-news-date';
+        dateSpan.textContent = dateText;
+
+        const titleSpan = document.createElement('span');
+        titleSpan.className = 'top-news-title';
+        titleSpan.textContent = titleText;
+
+        li.appendChild(dateSpan);
+        li.appendChild(titleSpan);
+        ul.appendChild(li);
+      });
+
+      // 既存の「読み込み中…」を消して、中身入れ替え
+      container.innerHTML = '';
+      container.appendChild(ul);
+    })
+    .catch(error => {
+      console.error('お知らせの読み込みに失敗しました', error);
+      container.textContent = 'お知らせの読み込みに失敗しました。';
+    });
+}
+
 
 // =============================
 // イベント登録
@@ -345,12 +391,12 @@ window.addEventListener('DOMContentLoaded', () => {
   setupScrollFade();
   setupSlideshow();
   setupMenuTabs();
-  setupSwiperSlider();
   setupNewsToggle();
   setupUnagiToggle();
   setupSmoothScroll();
   setupBackToTop();
   setupMenuImageModal();
+  loadTopNews();
 });
 
 window.addEventListener('load', () => {
