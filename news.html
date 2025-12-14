@@ -5,97 +5,68 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>お知らせ</title>
-<style>
-    body {
-      background-color: transparent;
-      margin: 0;
-      font-family: 'Shippori Mincho B1', serif;
-      color: #fafaf9;
-      font-size: 16px;
-    }
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&amp;family=Sawarabi+Mincho&amp;display=swap" rel="stylesheet"/>
 
-    .news-container {
-      padding: 10px;
-    border: 3px solid #050504; /* 金色風 */
-    border-radius: 8px;
-    box-shadow: 0 0 15px #fefdfd(214, 182, 123, 0.3); /* 金縁の輝き */
-    margin: 5px 0;
-    position: relative;
-    }
-
-    .news-item {
-      border-bottom: 1px solid  #f3cfcf;
-      padding: 10px 0;
-      cursor: pointer;
-    }
-
-    .news-title {
-      font-weight: bold;
-      font-size: 18px;
-      color:  #9d0808;
-    }
-
-    .news-content {
-      display: none;
-      padding: 8px 0 0 10px;
-      font-size: 15px;
-      color: #050504;
-    }
-
-    .news-item.active .news-content {
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-
-  body {
-    font-size: 15px;
-    padding: 5px;
-  }
-
-  .news-container {
-    padding: 8px;
-    margin: 8px 0;
-    border-radius: 6px;
-    box-shadow: 0 0 12px rgba(214, 182, 123, 0.25);
-  }
-
-  .news-item {
-    padding: 10px 0;
-    border-bottom: 1px solid #f3cfcf;
-  }
-
-  .news-title {
-    font-size: 16px;
-    line-height: 1.4;
-    color: #a70904; /* 少し明るい赤茶で視認性↑ */
-  }
-
-  .news-content {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #010101; /* 暗い背景の上で読める色に */
-    padding: 8px 0 0 10px;
-  }
-}
-  </style>
 </head>
-<body><h1>お知らせ</h1>
-<div class="news-container">
-<div class="news-item">
-<div class="news-title">2025/10/26 … 年末年始の営業について</div>
-<div class="news-content">
-        年末は12月30日まで営業いたしますが、12月29日は夜のみ休業とさせていただきます。
-        年始は1月3日より営業いたします。
-      </div>
-</div>
-<div class="news-item">
-<div class="news-title">2025/10/26 … 公式ホームページを開設しました</div>
-<div class="news-content"> <!-- ここにコメント -->
-      </div> 
-</div>
-</div>
+<body>
+  <!-- 下から出るメニュー（共通） -->
+  <div id="menu-placeholder"></div>
+  <!-- ヘッダー（共通） -->
+  <div id="header-placeholder"></div>
 
-<script defer="True" src="main.js"></script>
+  <!-- ページタイトル（共通スタイル） -->
+  <div class="page-header">
+    <h2 class="page-title">お知らせ</h2>
+  </div>
+
+  <!-- お知らせ一覧本体 -->
+  <section class="section news-page">
+    <div class="news-intro">
+      <p>
+        臨時休業や営業時間の変更、季節のおすすめなど、<br/>
+        当店からのお知らせを掲載しております。
+      </p>
+    </div>
+
+    <!-- ★トップページからも参照する一覧エリア -->
+    <div class="news-container" id="top-news">
+      <div class="news-item">
+        <div class="news-title">2025/10/26 … 年末年始の営業について</div>
+        <div class="news-content">
+          年末は12月30日まで営業いたしますが、12月29日は夜のみ休業とさせていただきます。<br/>
+          年始は1月3日より営業いたします<br/>
+          営業カレンダーをご確認ください
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">2025/10/26 … 公式ホームページを開設しました</div>
+        <div class="news-content">
+          うなぎの宿 住吉 公式ホームページをご覧いただきありがとうございます。<br/>
+          メニューや営業情報を随時更新してまいります。
+        </div>
+      </div>
+
+      <!-- ここに今後のお知らせを追加していく -->
+    </div>
+  </section>
+
+  <!-- 共通フッター -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© うなぎの宿 住吉</p>
+      <p>長野県長野市箱清水2丁目19-31</p>
+      <p>TEL：026-232-6304</p>
+    </div>
+  </footer>
+
+  <!-- 共通JS -->
+  <script src="main.js"></script>
+
+  <!-- ページトップへ戻るボタン（他ページと同じ） -->
+  <button type="button" class="back-to-top-btn" aria-label="ページの先頭へ戻る">
+    ▲
+  </button>
 </body>
 </html>

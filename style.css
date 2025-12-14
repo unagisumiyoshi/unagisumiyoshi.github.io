@@ -197,6 +197,65 @@ h2::after {
   margin: 10px auto 0;
 }
 
+/* === トップページ用 お知らせ一覧 === */
+.top-news-list {
+  margin-top: 0px;
+  text-align: left;
+}
+
+.top-news-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Shippori Mincho B1', serif;
+}
+
+.top-news-ul li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px dotted #d88c36;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.top-news-date {
+  font-size: 14px;
+  color: #666;
+  min-width: 110px;  /* 日付部分をそろえる用 */
+}
+
+.top-news-title {
+  font-weight: 700;
+  color: #1c1c1c;
+}
+
+/* 一覧へのリンク */
+.news-link-wrapper {
+  margin-top: 12px;
+}
+
+.news-more-link {
+  display: inline-block;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 14px;
+  color: #971c06;
+  text-decoration: underline;
+}
+
+/* スマホで少しだけ小さく */
+@media (max-width: 768px) {
+  .top-news-ul li {
+    font-size: 14px;
+  }
+
+  .top-news-date {
+    font-size: 13px;
+    min-width: 90px;
+  }
+}
+
 /* === スクロールアニメーション === */
 .fade-in {
   opacity: 0;
@@ -1571,4 +1630,96 @@ body {
   color: #fdf6e8;
   font-size: 28px;
   cursor: pointer;
+}
+
+/* ===========================
+   お知らせページ
+=========================== */
+
+.news-page {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 0 12px;
+}
+
+.news-intro {
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+.news-intro p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* 一覧の枠 */
+.news-container {
+  border-radius: 12px;
+  border: 1px solid rgba(151, 28, 6, 0.2);
+  background: #fffdf7;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  padding: 14px 18px;
+}
+
+/* 1件ごとの行 */
+.news-item {
+  padding: 12px 0;
+  border-bottom: 1px dotted #e0c2b0;
+  cursor: pointer;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+/* タイトル行（クリック部分） */
+.news-title {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #971c06;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.news-title::before {
+  content: "●";
+  font-size: 8px;
+  color: #d88c36;
+}
+
+/* 開いたときに表示される本文 */
+.news-content {
+  display: none;
+  margin-top: 6px;
+  padding-left: 1.4em;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* クリックで .active になったときに表示 */
+.news-item.active .news-content {
+  display: block;
+}
+
+/* スマホ調整 */
+@media (max-width: 768px) {
+  .news-page {
+    margin-bottom: 60px;
+  }
+
+  .news-container {
+    padding: 10px 12px;
+  }
+
+  .news-title {
+    font-size: 15px;
+  }
+
+  .news-content {
+    font-size: 13px;
+  }
 }
