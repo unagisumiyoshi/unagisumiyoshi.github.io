@@ -1674,7 +1674,7 @@ body {
 /* タイトル行（クリック部分） */
 .news-title {
   font-family: 'Shippori Mincho B1', serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: #971c06;
   display: flex;
@@ -1693,7 +1693,7 @@ body {
   display: none;
   margin-top: 6px;
   padding-left: 1.4em;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
   color: #333;
 }
