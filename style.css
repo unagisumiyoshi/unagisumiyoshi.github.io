@@ -1721,3 +1721,58 @@ body {
     font-size: 13px;
   }
 }
+
+/* ===========================
+   店舗情報：共通の箱（カード）とラベル
+=========================== */
+
+.shop-card{
+  margin: 14px 0 22px;
+  padding: 16px 18px;
+  background: #fffdf7;
+  border-radius: 10px;
+  border: 1px solid rgba(151, 28, 6, 0.20);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+/* 既存の .shop-*** p を上書きせず、箱の中だけ整える */
+.shop-card p{
+  display: flex;
+  gap: 14px;
+  margin: 10px 0; /* 既存の p margin を軽く整える */
+}
+
+/* ラベル（見出し） */
+.shop-label{
+  min-width: 90px;
+  font-family: 'Shippori Mincho B1', serif;
+  font-weight: 700;
+  color: #971c06;
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
+/* 改行を含む行でもレイアウトが崩れないように */
+.shop-card p{
+  align-items: flex-start;
+}
+
+/* スマホは縦並びにして読みやすく */
+@media (max-width: 768px){
+  .shop-card{
+    padding: 16px 14px;
+    text-align: center;              /* ← 全体を中央寄せ */
+  }
+
+  .shop-card p{
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;             /* ← ラベルも内容も中央 */
+  }
+
+  .shop-label{
+    min-width: auto;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+  }
+}
