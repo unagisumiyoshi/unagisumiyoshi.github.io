@@ -55,7 +55,7 @@
     <small class="course-title">5,500円</small>
     <small class="course-body">
       お通し・酢の物・茶碗蒸し・八寸・お刺身・天ぷら・吸い物・うなぎ御飯
-      <span class="highlight">（蒲焼2/3枚を1枚にグレードアップ又は鍋料理をお付けするかをお選びいただきます）</span>・デザート ※写真は鍋を付けた場合です
+      <span class="highlight">（蒲焼2/3枚を1枚にグレードアップ又は鍋料理をお付けするかをお選びいただきます）</span>・デザート <br/>※写真は鍋を付けた場合です
     </small>
   </div>
   <div class="photo">
@@ -125,7 +125,7 @@
 
 <li class="card-acc">
 <div class="bar">
-<strong>ふぐコース（11月～3月限定）</strong>
+<strong>ふぐコース<br/>（11月～3月限定）</strong>
 <span class="price">10,780円</span>
 </div>
 <details>
@@ -250,28 +250,89 @@
 </ul>
 </div>
 <section class="room-info">
-<div class="room">
-<p><strong>お部屋のご案内</strong></p>
-<picture><source srcset="picture3/fuki.webp" type="image/webp"/><img alt="ふきの間" class="room-image" src="picture3/fuki.JPG">
-<p class="room-name"><strong>ふき</strong>（9名様まで向き）</p>
-</img></picture></div>
-<div class="room">
-<picture><source srcset="picture3/seseragi.webp" type="image/webp"/><img alt="せせらぎの間" class="room-image" src="picture3/seseragi.JPG">
-<p class="room-name"><strong>せせらぎ</strong>（12名様まで向き）</p>
-</img></picture></div>
-<div class="room">
-<picture><source srcset="picture3/tyuhiro.webp" type="image/webp"/><img alt="中広の間" class="room-image" src="picture3/tyuhiro.JPG">
-<p class="room-name"><strong>中広（8～20名様）</strong></p>
-</img></picture></div>
-<div class="room">
-<picture><source srcset="picture3/ohiro1.webp" type="image/webp"/><img alt="大広の間" class="room-image" src="picture3/ohiro1.JPG">
-<p class="room-name"><strong>大広（40名様前後）</strong></p>
-</img></picture></div>
-<div class="room">
-<picture><source srcset="picture3/kuretake1.webp" type="image/webp"/><img alt="くれたけの間" class="room-image" src="picture3/kuretake1.JPG">
-<p class="room-name"><strong>くれたけ</strong>（24名様まで向き）</p>
-</img></picture></div>
+  <div class="section">
+    <h2>お部屋のご案内</h2>
+
+    <!-- ふき：1枚 -->
+    <article class="room-card">
+      <div class="room-photos">
+        <picture>
+          <source srcset="picture3/fuki.webp" type="image/webp" />
+          <img class="room-main" src="picture3/fuki.JPG" alt="ふきの間" loading="lazy" />
+        </picture>
+      </div>
+      <p class="room-name"><strong>ふき</strong>（9名様まで）</p>
+    </article>
+
+    <!-- せせらぎ：1枚 -->
+    <article class="room-card">
+      <div class="room-photos">
+        <picture>
+          <source srcset="picture3/seseragi.webp" type="image/webp" />
+          <img class="room-main" src="picture3/seseragi.JPG" alt="せせらぎの間" loading="lazy" />
+        </picture>
+      </div>
+      <p class="room-name"><strong>せせらぎ</strong>（12名様まで）</p>
+    </article>
+
+    <!-- 中広：1枚 -->
+    <article class="room-card">
+      <div class="room-photos">
+        <picture>
+          <source srcset="picture3/tyuhiro.webp" type="image/webp" />
+          <img class="room-main" src="picture3/tyuhiro.JPG" alt="中広の間" loading="lazy" />
+        </picture>
+      </div>
+      <p class="room-name"><strong>中広</strong>（～20名様）</p>
+    </article>
+
+    <!-- 大広：2枚（メイン＋サブ1） -->
+    <article class="room-card">
+      <div class="room-photos">
+        <picture>
+          <source srcset="picture/ohiro.webp" type="image/webp" />
+          <img class="room-main" src="picture/ohiro.jpg" alt="大広の間" loading="lazy" />
+        </picture>
+
+        <div class="room-sub">
+          <!-- 2枚目（ファイル名は実在に合わせて変更してOK） -->
+          <picture>
+            <source srcset="picture3/ohiro2.webp" type="image/webp" />
+            <img src="picture3/ohiro2.JPG" alt="大広の間 別角度" loading="lazy" />
+          </picture>
+        </div>
+      </div>
+      <p class="room-name"><strong>大広</strong>（~40名様前後）</p>
+    </article>
+
+    <!-- くれたけ：3枚（メイン＋サブ2） -->
+    <article class="room-card">
+      <div class="room-photos">
+        <picture>
+          <source srcset="picture3/kuretake3.webp" type="image/webp" />
+          <img class="room-main" src="picture3/kuretake3.JPG" alt="くれたけの間" loading="lazy" />
+        </picture>
+
+        <div class="room-sub">
+          <!-- 2枚目・3枚目（ファイル名は実在に合わせて変更してOK） -->
+          <picture>
+            <source srcset="picture3/kuretake2.webp" type="image/webp" />
+            <img src="picture3/kuretake2.JPG" alt="くれたけの間 別角度" loading="lazy" />
+          </picture>
+          <picture>
+            <source srcset="picture3/kuretake1.webp" type="image/webp" />
+            <img src="picture3/kuretake1.JPG" alt="くれたけの間 別角度" loading="lazy" />
+          </picture>
+        </div>
+      </div>
+      <p class="room-name"><strong>くれたけ</strong>（～24名様向き）</p>
+      <p>飲み放題専用　セルフドリンクコーナーご利用いただけます</p>
+    
+    </article>
+
+  </div>
 </section>
+
 <footer class="site-footer">
 <div class="footer-inner">
 <p>© うなぎの宿 住吉</p>

@@ -8,6 +8,15 @@ body {
   color: #050504;
   max-width: 100%;
   overflow-x: hidden;
+  padding-right: 44px; /* ボタンの幅＋余裕分 */
+}
+
+@media (max-width: 768px) {
+  body {
+padding-right: 0px; /* スマホでは不要 */
+padding-top: calc(56px + env(safe-area-inset-top));
+
+  }
 }
 
  
@@ -15,7 +24,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('picture/unagi5.JPG'); /* 背景画像パス */
+  background-image: url('picture3/sumibi.jpg'); /* 背景画像パス */
   background-size: cover ;
   background-position: center 80px;
   background-repeat: no-repeat;
@@ -101,10 +110,6 @@ body {
     transform: translateY(0);
   }
 }
-
-
-
-
 /* PC向け（768px以上） */
 @keyframes slideInLeft {
   0% {
@@ -127,11 +132,6 @@ body {
     opacity: 1;
   }
 }
-
-
-
-
-
 @keyframes zoomBg {
   from {
       background-size: 100%;
@@ -140,10 +140,6 @@ body {
       background-size: 120%;
   }
 }
-
-
-
-
 /* === セクション共通設定 === */
 .section {
   padding: 100px 20px;
@@ -255,7 +251,6 @@ h2::after {
     min-width: 90px;
   }
 }
-
 /* === スクロールアニメーション === */
 .fade-in {
   opacity: 0;
@@ -288,8 +283,6 @@ h2::after {
     border: 0;
   }
 }
-
-
 /* === 固定MENUボタン === */
 .fixed-menu-btn {
   position: fixed;
@@ -298,13 +291,11 @@ h2::after {
   z-index: 999;
   width: 35px;
   height: 500px;
-  padding: 8px 0;
   display: flex;                /* 🔴変更：grid → flex（縦並びに変更） */
   flex-direction: column;       /* 🔴追加：縦方向に配置 */
   align-items: center;          /* 🔴追加：中央寄せ */
   justify-content: center;      /* 🔴追加：中央寄せ */
   gap: 10px;                    /* 🔴追加：アイコンと文字の間隔 */
-
   font-weight: 700;
   letter-spacing: .18em;
   color: #111;
@@ -315,9 +306,8 @@ h2::after {
   cursor: pointer;
   user-select: none;
   transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
-  
   padding: 10px 0; 
-   font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 0.9rem;
   line-height: 1.1;
 }
@@ -334,10 +324,6 @@ h2::after {
   outline: 2px solid #a00000;
   outline-offset: 3px;
 }
-
-
-
-
 /* ホバー時に軽く動く */
 .fixed-menu-btn:hover::before {
   transform: rotate(90deg) translateY(-2px);
@@ -354,7 +340,7 @@ h2::after {
     backdrop-filter: blur(6px);
     writing-mode: horizontal-tb; /* 横書き指定 */
     line-height: 1;
-        font-size: 16px;
+    font-size: 16px;
     letter-spacing: 0.05em;
   }
     .fixed-menu-btn br {
@@ -376,9 +362,8 @@ h2::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 12px;
+    padding: 10px 20px;
   }
-
   /* ロゴ行（今の .site-logo-header をバー内左寄せに） */
   .site-logo-header{
     position: static;             /* 既存の absolute を無効化 */
@@ -391,11 +376,8 @@ h2::after {
     font-size: 20px;
     color: #040404;
   }
-    /* ヘッダーがfixedなので、本文が隠れないように上に余白を確保 */
-  body{ padding-top: 56px; }
+  
 }
-
-
 /* iOSノッチ安全域（任意だが推奨） */
 @supports (padding-top: env(safe-area-inset-top)){
   @media (max-width: 768px){
@@ -403,7 +385,6 @@ h2::after {
       padding-top: env(safe-area-inset-top);
       height: calc(56px + env(safe-area-inset-top));
     }
-    body{ padding-top: calc(56px + env(safe-area-inset-top)); }
   }
 }
 
@@ -447,7 +428,6 @@ h2::after {
   color: #e07a3f;
 }
 
-
 .top-slideshow {
   height: 140vh;
   position: relative;
@@ -455,10 +435,9 @@ h2::after {
   margin: 0;
   padding: 0;
 }
-
 @media (max-width: 768px) {
   .top-slideshow {
-  height: 100vh;
+  height: 40vh;
   position: relative;
   overflow: hidden;
   top: -50px;
@@ -547,26 +526,12 @@ h2::after {
     height: 60vh;
   }
 
-  .fv-content h1 {
-    font-size: 28px;
-  }
-
-  .fv-content p {
-    font-size: 16px;
-  }
-
   .section {
     padding: 60px 15px;
   }
 
   .section h2 {
     font-size: 22px;
-  }
-
- 
-
-  .top-slideshow {
-    height: 40vh;
   }
 }
 @media (max-width: 600px) {
@@ -575,32 +540,12 @@ h2::after {
     padding: 60px 15px;
   }
 
-  /* ファーストビューの文字サイズ調整 */
-  .fv-content h1 {
-    font-size: 32px;
-  }
-
-  .fv-content p {
-    font-size: 16px;
-  }
-
-
-
-
-  /* スライドショーの高さを短く */
-  .top-slideshow {
-    height: 40vh;
-    overflow: visible;       /* ← hidden から上書き */
-  }
-
-
   /* インジケーターの大きさ調整 */
   .indicators span {
     width: 60px;
     height: 3px;
     bottom: -30px; 
   }
-
 
   /* 下部メニューリンクの文字サイズ調整 */
   .bottom-menu-overlay a {
@@ -629,8 +574,6 @@ h2::after {
   opacity: 1;
   transform: translateY(0);
 }
-
-
 
 /* --- 四角でつながるボタンデザイン --- */
 .menu-category-nav {
@@ -684,27 +627,10 @@ h2::after {
   background-color: #b41f1f;
   color: #fff;
 }
-.site-header h2{
-  font-size: 40px;
-  margin-bottom: 30px;
-  text-align: center;
-  border-bottom: 3px solid #e07a3f;
-  display: inline-block;
-  padding-bottom: 5px;
-  width: 300px;
-}
+
 @media screen and (max-width: 768px) {
   .site-header {
     text-align: center; /* コンテナごと中央寄せ */
-  }
-
-  .site-header h2 {
-    font-size: 26px;
-    width: auto;                  /* 固定幅を解除して中央に自然に */
-    display: inline-block;        /* 線を文字の長さに合わせる */
-    margin: 0 auto 5px;          /* 上下の余白と中央寄せ */
-    border-bottom: 2px solid #e07a3f;
-    padding-bottom: 4px;
   }
 }
 
@@ -766,77 +692,6 @@ h2::after {
   50% { transform: scale(1.05); }
 }
 
-@media (max-width: 600px) {
-  .menu-photo img,
-  .menu-image img {
-    max-width: 90%;
-  }
-
-  .menu-image figcaption,
-  .menu-photo .caption {
-    font-size: 14px;
-    line-height: 1.4;
-    text-align: center;
-  }
-}
-
-  
-
-
-
-
-
-.menu-items p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin: 15px 0;
-  color: #1c1c1c;
-  font-family: 'Shippori Mincho B1', serif;
-}
-
-.menu-image {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.menu-image img {
-  max-width: 300px;
-  width: 100%;
-  border-radius: 10px;
-}
-
-.menu-image figcaption {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #fafaf9;
-  font-family: 'Shippori Mincho B1', serif;
-}
-
-.menu-photo {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.menu-photo img {
-  max-width: 300px;
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-
-.menu-photo .caption {
-  margin-top: 8px;
-  font-size: 16px;
-  color: #1c1c1c;
-}
-
-
-.caption {
-  margin-top: 6px;
-  font-size: 14px;
-  color: #1c1c1c;
-  font-family: 'Shippori Mincho B1', serif;
-}
 .menu-list {
   list-style: none;
   padding: 0;
@@ -844,11 +699,8 @@ h2::after {
   font-family: 'Shippori Mincho B1', serif;
 }
 
-
-
 .menu-list li {
   display: flex;
-  align-items: left;
   justify-content: center;
   gap: 2em;  
   padding: 8px 0;
@@ -865,27 +717,6 @@ h2::after {
     gap: 12px;
   }
 }
-
-
-
-
-@media (max-width: 768px) {
-
-
-  .site-header {
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .site-header h1 {
-    font-size: 18px;
-  }
-}
-
-
-
 .sdgs-section h2 {
   font-family: 'Shippori Mincho B1', serif;
   font-size: 1.1em;
@@ -939,8 +770,6 @@ h2::after {
   }
 }
 
-
-
 .site-logo-header {
   display: flex;
   align-items: center;
@@ -960,7 +789,6 @@ h2::after {
   color: #1c1c1c;
   font-size: 20px;
 }
-
 
 .room-info {
   background-color: #fefdfd;
@@ -1229,9 +1057,6 @@ font-weight: 700;
     margin-left: 1rem;
   }
 }
-
-
-
 .card-acc .photo {
   margin-top: .6rem;
   border-radius: 10px;
@@ -1244,16 +1069,7 @@ font-weight: 700;
   object-fit: cover;
   transition: transform .3s ease;
 }
-/* === 右側固定メニューボタンと重ならないための余白 === */
-body {
-  padding-right: 44px; /* ボタンの幅＋余裕分 */
-}
 
-@media (max-width: 768px) {
-  body {
-    padding-right: 0px; /* スマホでは不要 */
-  }
-}
 
 /* ===== 1) スマホ～タブレット最適化（<= 768px） ===== */
 @media (max-width: 768px){
@@ -1281,9 +1097,8 @@ body {
     justify-content: center; /* 中央寄せ */
     align-items: center;
     margin-top: 10px;
- 
-
-}}
+}
+}
 
 
 /* ===== 2) 狭幅スマホ（<= 480px） ===== */
@@ -1299,8 +1114,6 @@ body {
 @media (prefers-reduced-motion: reduce){
   .card-acc *{ transition:none !important; animation:none !important; }
 }
-
-
 
 .payment-icons {
   display: flex;
@@ -1333,11 +1146,6 @@ body {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-.payment-group .note {
-  width: 100%;
-  font-size: 0.9rem;
-  color: #555;
-}
 @media screen and (max-width: 768px) {
   .payment-group img {
     width: 30px;     /* ← 60pxから縮小 */
@@ -1346,10 +1154,6 @@ body {
 
   .payment-group h4 {
     font-size: 1rem; /* 見出しも少し小さめ */
-  }
-
-  .payment-group .note {
-    font-size: 0.85rem;
   }
 }
 .unagi-toggle-box {
@@ -1464,7 +1268,6 @@ body {
   border: none;
 }
 
-
 /* 挨拶（shop-message）だけ少し柔らかい感じに */
 .shop-message p {
   font-size: 1.05rem;
@@ -1515,10 +1318,6 @@ body {
     display: none;
   }
 }
-
-/* === メニュー用サムネ：テキスト中央のまま横に画像を付ける === */
-
-
 
 /* テキスト部分は固定幅の“中央ボックス”にする */
 .menu-with-thumb .menu-text {
@@ -1585,7 +1384,6 @@ body {
 .menu-item-price {
   width: 90px;
 }
-
 }
 
 /* === 拡大画像モーダル === */
@@ -1740,6 +1538,7 @@ body {
   display: flex;
   gap: 14px;
   margin: 10px 0; /* 既存の p margin を軽く整える */
+  align-items: flex-start;
 }
 
 /* ラベル（見出し） */
@@ -1750,11 +1549,6 @@ body {
   color: #971c06;
   letter-spacing: 0.05em;
   line-height: 1.8;
-}
-
-/* 改行を含む行でもレイアウトが崩れないように */
-.shop-card p{
-  align-items: flex-start;
 }
 
 /* スマホは縦並びにして読みやすく */
@@ -1775,4 +1569,109 @@ body {
     font-size: 0.85rem;
     letter-spacing: 0.08em;
   }
+}
+
+/* =========================
+   宴会ページ：お部屋紹介（案①）
+========================= */
+
+/* 既存 .room-info を活かしつつ、余白と背景だけ整える */
+.room-info{
+  padding: 40px 0 80px;
+}
+
+/* 1部屋のカード */
+.room-card{
+  margin: 40px auto 55px;
+  max-width: 920px;
+  text-align: center;
+}
+
+/* 写真ブロック */
+.room-photos{
+  display: grid;
+  gap: 12px;
+}
+
+/* メイン写真 */
+.room-photos .room-main{
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.22);
+  display: block;
+  object-fit: cover;
+}
+
+/* サブ写真：横並び */
+.room-sub{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* サブ写真の見た目 */
+.room-sub img{
+  width: 100%;
+  height: 170px;            /* PCは高さを揃えて“付属感” */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  display: block;
+  object-fit: cover;
+}
+
+/* 部屋名 */
+.room-name{
+  margin: 12px 0 0;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 22px;
+  letter-spacing: 0.06em;
+}
+
+/* スマホ最適化 */
+@media (max-width: 768px){
+  .room-info{
+    padding: 25px 0 60px;
+  }
+
+  .room-card{
+    margin: 28px auto 42px;
+  }
+
+  .room-photos{
+    gap: 10px;
+  }
+
+  .room-photos .room-main{
+    border-radius: 12px;
+  }
+
+  .room-sub{
+    gap: 10px;
+  }
+
+  .room-sub img{
+    height: 110px;          /* スマホは圧迫しない高さに */
+    border-radius: 10px;
+  }
+
+  .room-name{
+    font-size: 18px;
+  }
+}
+
+
+
+
+.room-card{
+  margin: 50px auto 70px;
+  max-width: 920px;
+  text-align: center;
+
+  background: #fffdf7;
+  border: 1px solid rgba(151, 28, 6, 0.18);
+  border-radius: 16px;
+  padding: 22px 22px 26px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
