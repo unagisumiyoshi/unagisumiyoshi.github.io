@@ -252,85 +252,110 @@
 <section class="room-info">
   <div class="section">
     <h2>お部屋のご案内</h2>
+    <div class="room-grid">
 
     <!-- ふき：1枚 -->
     <article class="room-card">
       <div class="room-photos">
-        <picture>
-          <source srcset="picture3/fuki.webp" type="image/webp" />
-          <img class="room-main" src="picture3/fuki.JPG" alt="ふきの間" loading="lazy" />
-        </picture>
-      </div>
+        <button type="button" class="room-zoom-btn js-room-zoom" data-img="picture3/fuki.JPG" aria-label="ふきの間の写真を拡大">
+          <picture>
+            <source srcset="picture3/fuki.webp" type="image/webp" />
+            <img class="room-main" src="picture3/fuki.JPG" alt="ふきの間" loading="lazy" />
+          </picture>
+          </button>
+        </div>
       <p class="room-name"><strong>ふき</strong>（9名様まで）</p>
     </article>
 
     <!-- せせらぎ：1枚 -->
     <article class="room-card">
       <div class="room-photos">
-        <picture>
-          <source srcset="picture3/seseragi.webp" type="image/webp" />
-          <img class="room-main" src="picture3/seseragi.JPG" alt="せせらぎの間" loading="lazy" />
-        </picture>
-      </div>
+         <button type="button" class="room-zoom-btn js-room-zoom" data-img="picture3/seseragi.JPG" aria-label="せせらぎの間の写真を拡大">
+          <picture>
+            <source srcset="picture3/seseragi.webp" type="image/webp" />
+            <img class="room-main" src="picture3/seseragi.JPG" alt="せせらぎの間" loading="lazy" />
+          </picture>
+          </button>
+        </div>
       <p class="room-name"><strong>せせらぎ</strong>（12名様まで）</p>
     </article>
 
     <!-- 中広：1枚 -->
     <article class="room-card">
       <div class="room-photos">
-        <picture>
-          <source srcset="picture3/tyuhiro.webp" type="image/webp" />
-          <img class="room-main" src="picture3/tyuhiro.JPG" alt="中広の間" loading="lazy" />
-        </picture>
-      </div>
+         <button type="button" class="room-zoom-btn js-room-zoom" data-img="picture3/tyuhiro.JPG" aria-label="中広間の写真を拡大">
+          <picture>
+            <source srcset="picture3/tyuhiro.webp" type="image/webp" />
+            <img class="room-main" src="picture3/tyuhiro.JPG" alt="中広の間" loading="lazy" />
+          </picture>
+          </button>
+        </div>
       <p class="room-name"><strong>中広</strong>（～20名様）</p>
     </article>
 
     <!-- 大広：2枚（メイン＋サブ1） -->
     <article class="room-card">
-      <div class="room-photos">
-        <picture>
-          <source srcset="picture/ohiro.webp" type="image/webp" />
-          <img class="room-main" src="picture/ohiro.jpg" alt="大広の間" loading="lazy" />
-        </picture>
+          <div class="room-photos">
+             <button type="button" class="room-zoom-btn js-room-zoom" data-img="picture3/ohiro.JPG" aria-label="大広間の写真を拡大">
+            <picture>
+              <source srcset="picture/ohiro.webp" type="image/webp" />
+              <img class="room-main" src="picture/ohiro.jpg" alt="大広の間" loading="lazy" />
+            </picture>
+            </button>
 
-        <div class="room-sub">
+            <div class="room-sub">
           <!-- 2枚目（ファイル名は実在に合わせて変更してOK） -->
-          <picture>
-            <source srcset="picture3/ohiro2.webp" type="image/webp" />
-            <img src="picture3/ohiro2.JPG" alt="大広の間 別角度" loading="lazy" />
-          </picture>
-        </div>
-      </div>
+           <button type="button" class="room-zoom-btn js-room-zoom" data-img="picture3/ohiro2.JPG" aria-label="大広間（別角度）を拡大">
+              <picture>
+                <source srcset="picture3/ohiro2.webp" type="image/webp" />
+                <img src="picture3/ohiro2.JPG" alt="大広の間 別角度" loading="lazy" />
+              </picture>
+              </button>
+            </div>
+          </div>
       <p class="room-name"><strong>大広</strong>（~40名様前後）</p>
     </article>
 
     <!-- くれたけ：3枚（メイン＋サブ2） -->
     <article class="room-card">
-      <div class="room-photos">
-        <picture>
-          <source srcset="picture3/kuretake3.webp" type="image/webp" />
-          <img class="room-main" src="picture3/kuretake3.JPG" alt="くれたけの間" loading="lazy" />
-        </picture>
+          <div class="room-photos">
+             <button type="button" class="room-zoom-btn js-room-zoom" data-img="picture3/kuretake3.JPG" aria-label="くれたけの間の写真を拡大">
+            <picture>
+              <source srcset="picture3/kuretake3.webp" type="image/webp" />
+              <img class="room-main" src="picture3/kuretake3.JPG" alt="くれたけの間" loading="lazy" />
+            </picture>
+            </button>
 
-        <div class="room-sub">
+            <div class="room-sub">
           <!-- 2枚目・3枚目（ファイル名は実在に合わせて変更してOK） -->
-          <picture>
-            <source srcset="picture3/kuretake2.webp" type="image/webp" />
-            <img src="picture3/kuretake2.JPG" alt="くれたけの間 別角度" loading="lazy" />
-          </picture>
-          <picture>
-            <source srcset="picture3/kuretake1.webp" type="image/webp" />
-            <img src="picture3/kuretake1.JPG" alt="くれたけの間 別角度" loading="lazy" />
-          </picture>
-        </div>
-      </div>
+           <button type="button" class="room-zoom-btn js-room-zoom" data-img="picture3/kuretake2.JPG" aria-label="くれたけ間（別角度）を拡大">
+              <picture>
+                <source srcset="picture3/kuretake2.webp" type="image/webp" />
+                <img src="picture3/kuretake2.JPG" alt="くれたけの間 別角度" loading="lazy" />
+              </picture>
+              </button>
+              <button type="button" class="room-zoom-btn js-room-zoom" data-img="picture3/kuretake1.JPG" aria-label="くれたけの間（別角度）を拡大">
+              <picture>
+                <source srcset="picture3/kuretake1.webp" type="image/webp" />
+                <img src="picture3/kuretake1.JPG" alt="くれたけの間 別角度" loading="lazy" />
+              </picture>
+              </button>
+            </div>
+          </div>
       <p class="room-name"><strong>くれたけ</strong>（～24名様向き）</p>
       <p>飲み放題専用　セルフドリンクコーナーご利用いただけます</p>
     
     </article>
 
+    </div>
   </div>
+  <!-- 部屋写真 拡大モーダル（既存CSSを流用） -->
+<div class="menu-image-modal" id="room-image-modal" aria-hidden="true">
+  <div class="menu-image-modal-inner" role="dialog" aria-modal="true" aria-label="お部屋の写真">
+    <button type="button" class="menu-image-modal-close" aria-label="閉じる">×</button>
+    <img id="room-modal-img" src="" alt="">
+  </div>
+</div>
 </section>
 
 <footer class="site-footer">

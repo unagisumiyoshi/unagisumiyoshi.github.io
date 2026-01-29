@@ -308,6 +308,54 @@ function setupMenuImageModal() {
   });
 }
 
+// =============================
+// 宴会：部屋写真 拡大モーダル
+// =============================
+function setupRoomImageModal() {
+  const modal = document.getElementById('room-image-modal');
+  const modalImg = document.getElementById('room-modal-img');
+  const closeBtn = modal?.querySelector('.menu-image-modal-close');
+
+  if (!modal || !modalImg || !closeBtn) return;
+
+  // 部屋写真のクリックを拾う
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.js-room-zoom');
+    if (!btn) return;
+
+    const src = btn.dataset.img;
+    if (!src) return;
+
+    modalImg.src = src;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // 閉じる（×）
+  closeBtn.addEventListener('click', close);
+
+  // 背景クリック
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) close();
+  });
+
+  // ESCキー
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      close();
+    }
+  });
+
+  function close() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    modalImg.src = '';
+    document.body.style.overflow = '';
+  }
+}
+
+
 // =========================
 // トップページ用 お知らせ読み込み
 // =========================
@@ -396,6 +444,7 @@ window.addEventListener('DOMContentLoaded', () => {
   setupSmoothScroll();
   setupBackToTop();
   setupMenuImageModal();
+  setupRoomImageModal();
   loadTopNews();
 });
 
