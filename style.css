@@ -404,15 +404,15 @@ h2::after {
 
 
 .bottom-menu-overlay.open {
-  height: 80svh;  /* 端末高さに追従 */
+  height: 45vh;
 }
 
 .bottom-menu-overlay ul {
-  max-height: calc(80svh - 40px);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
 }
-
 
 .bottom-menu-overlay li {
   margin: 15px 0;
@@ -427,15 +427,6 @@ h2::after {
 
 .bottom-menu-overlay a:hover {
   color: #e07a3f;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
-  .bottom-menu-overlay.open{
-    height: 60svh; /* 空きすぎ防止 */
-  }
-  .bottom-menu-overlay ul{
-    max-height: calc(60svh - 40px);
-  }
 }
 
 .top-slideshow {
@@ -473,7 +464,7 @@ h2::after {
   transition: opacity 1s ease;
 }
 
-@media (min-width: 769px) and (min-height: 600px) and (orientation: landscape) {
+@media (min-width: 769px) {
   .slideshow img {
     width: 100%;
     height: 100%;
@@ -1769,46 +1760,3 @@ font-weight: 700;
 }
 
 
-@media (max-height: 500px) and (orientation: landscape) {
-  .top-slideshow{
-    height: 55svh;   /* 横向きは低めでOK */
-    top: 0;          /* -50px はズレの原因になりやすい */
-  }
-
-  .slideshow img{
-    object-fit: cover;   /* 長細くならない */
-    transform: none;     /* scaleで余白が出るのを防ぐ */
-  }
-
-  .indicators{
-    bottom: 8px;         /* かぶりが気になるなら 0〜10px で調整 */
-  }
-
-  /* フォント巨大化の保険（スマホ横だけ少し抑える） */
-  .firstview-message{
-    font-size: 22px;
-    top: -30px;
-  }
-}
-
-/* タブレット縦：スマホ扱い（見た目を詰める） */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .first-view{
-    height: 75svh;                 /* 100vhだと間延びしやすい */
-    background-position: center 60px; /* ヘッダー分だけ下げる */
-  }
-
-  .firstview-message{
-    font-size: 26px;
-    top: -40px;
-  }
-
-  .top-slideshow{
-    height: 45svh;
-    top: 0;                        /* -50pxで不自然な隙間が出やすい */
-  }
-
-  .indicators{
-    bottom: 10px;
-  }
-}
