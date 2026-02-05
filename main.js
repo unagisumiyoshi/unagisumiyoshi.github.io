@@ -188,10 +188,17 @@ function setupNewsToggle() {
 
   items.forEach(item => {
     item.addEventListener('click', () => {
-      item.classList.toggle('active');
+      const isOpen = item.classList.contains('active');
+
+      // いったん全部閉じる
+      items.forEach(i => i.classList.remove('active'));
+
+      // クリックしたやつが「閉じていた」なら開く（開いてたなら閉じたまま）
+      if (!isOpen) item.classList.add('active');
     });
   });
 }
+
 
 // =============================
 // うなぎの量「目安」トグル
@@ -378,8 +385,8 @@ function loadTopNews() {
         return;
       }
 
-      // 最新3件だけ使う（必要なら2件に減らしてOK）
-      const latest = items.slice(0, 3);
+      // 最新2件だけ使う（必要なら2件に減らしてOK）
+      const latest = items.slice(0, 2);
 
       // UL を作る
       const ul = document.createElement('ul');
@@ -421,6 +428,27 @@ function loadTopNews() {
     });
 }
 
+// =============================
+// 宴会：<details> を「1つだけ開く」アコーディオンにする
+// =============================
+function setupEnkaiDetailsAccordion() {
+  // 宴会ページのコース一覧内だけ対象（他ページに影響させない）
+  const scope = document.querySelector('.enkai-list');
+  if (!scope) return;
+
+  const allDetails = Array.from(scope.querySelectorAll('details'));
+  if (!allDetails.length) return;
+
+  allDetails.forEach(d => {
+    d.addEventListener('toggle', () => {
+      // 開いたときだけ、他を閉じる
+      if (!d.open) return;
+      allDetails.forEach(other => {
+        if (other !== d) other.open = false;
+      });
+    });
+  });
+}
 
 // =============================
 // イベント登録
@@ -445,6 +473,7 @@ window.addEventListener('DOMContentLoaded', () => {
   setupBackToTop();
   setupMenuImageModal();
   setupRoomImageModal();
+  setupEnkaiDetailsAccordion();
   loadTopNews();
 });
 
