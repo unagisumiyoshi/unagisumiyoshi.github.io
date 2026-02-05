@@ -412,6 +412,7 @@ h2::after {
   padding: 20px;
   margin: 0;
   text-align: center;
+  -webkit-overflow-scrolling: touch;
 }
 
 .bottom-menu-overlay li {
@@ -464,7 +465,7 @@ h2::after {
   transition: opacity 1s ease;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) and (min-height: 600px) and (orientation: landscape) {
   .slideshow img {
     width: 100%;
     height: 100%;
@@ -1760,3 +1761,24 @@ font-weight: 700;
 }
 
 
+@media (max-height: 500px) and (orientation: landscape) {
+  .top-slideshow{
+    height: 55svh;   /* 横向きは低めでOK */
+    top: 0;          /* -50px はズレの原因になりやすい */
+  }
+
+  .slideshow img{
+    object-fit: cover;   /* 長細くならない */
+    transform: none;     /* scaleで余白が出るのを防ぐ */
+  }
+
+  .indicators{
+    bottom: 8px;         /* かぶりが気になるなら 0〜10px で調整 */
+  }
+
+  /* フォント巨大化の保険（スマホ横だけ少し抑える） */
+  .firstview-message{
+    font-size: 22px;
+    top: -30px;
+  }
+}
