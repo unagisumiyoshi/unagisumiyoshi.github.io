@@ -1760,3 +1760,82 @@ font-weight: 700;
 }
 
 
+
+/* =========================================================
+   追加：スマホ横（landscape）と タブレット縦（portrait）を安定化
+========================================================= */
+
+/* ========== 1) スマホ横：崩壊の主因（PC用769px以上）を打ち消す ========== */
+/* 高さが低い横画面＝ほぼスマホ横だけを拾う */
+@media (max-height: 500px) and (orientation: landscape) {
+
+  /* index背景とテキストのズレ対策 */
+  .first-view{
+    background-position: center 40px; /* 80pxだとズレやすい */
+  }
+
+  /* フォントがやたら大きくなるのを防止（min-width:769pxの40pxを上書き） */
+  .firstview-message{
+    font-size: 22px;
+    top: -20px;
+    line-height: 1.6;
+  }
+
+  /* スライドが横長になる原因（contain＋scale0.8）を上書き */
+  .slideshow img{
+    object-fit: cover;
+    transform: scale(1);
+  }
+
+  /* インジケーターがかぶる対策（少し上に or 余白を確保） */
+  .indicators{
+    bottom: 8px;
+  }
+
+  /* 下から出るメニュー：全部タップできる高さまで上げる */
+  .bottom-menu-overlay.open{
+    height: 95svh;
+  }
+  .bottom-menu-overlay ul{
+    max-height: calc(95svh - 40px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+
+/* ========== 2) タブレット縦：スマホ寄せ（間延び・ズレ・インジケーター） ========== */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+
+  /* index背景とテキストのズレ対策 */
+  .first-view{
+    background-position: center 60px;
+    height: 85svh; /* 100vhだと間延びしやすい */
+  }
+
+  .firstview-message{
+    font-size: 26px;
+    top: -40px;
+  }
+
+  /* タブ縦だとmax-width:768のルールが効かない機種があるので、ここでスマホ寄せ */
+  .top-slideshow{
+    height: 45svh;
+    top: -30px;
+  }
+
+  /* インジケーターが下に離れすぎるのを抑える */
+  .indicators{
+    bottom: 10px;
+  }
+
+  /* 下メニュー：空きすぎを抑えつつ、スクロール可能にして破綻ゼロに */
+  .bottom-menu-overlay.open{
+    height: 60svh;
+  }
+  .bottom-menu-overlay ul{
+    max-height: calc(60svh - 40px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
