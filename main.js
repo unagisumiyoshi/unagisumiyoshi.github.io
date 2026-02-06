@@ -188,13 +188,21 @@ function setupNewsToggle() {
 
   items.forEach(item => {
     item.addEventListener('click', () => {
-      const isOpen = item.classList.contains('active');
+      // クリックした item の「画面内の位置」を記録
+      const beforeTop = item.getBoundingClientRect().top;
+      const wasOpen = item.classList.contains('active');
 
       // いったん全部閉じる
       items.forEach(i => i.classList.remove('active'));
 
-      // クリックしたやつが「閉じていた」なら開く（開いてたなら閉じたまま）
-      if (!isOpen) item.classList.add('active');
+      // クリックしたやつが閉じてたなら開く（開いてたなら閉じたまま）
+      if (!wasOpen) item.classList.add('active');
+
+      // レイアウト確定後にスクロール補正（見出し位置を固定）
+      requestAnimationFrame(() => {
+        const afterTop = item.getBoundingClientRect().top;
+        window.scrollBy(0, afterTop - beforeTop);
+      });
     });
   });
 }
@@ -432,7 +440,6 @@ function loadTopNews() {
 // 宴会：<details> を「1つだけ開く」アコーディオンにする
 // =============================
 function setupEnkaiDetailsAccordion() {
-  // 宴会ページのコース一覧内だけ対象（他ページに影響させない）
   const scope = document.querySelector('.enkai-list');
   if (!scope) return;
 
@@ -441,10 +448,20 @@ function setupEnkaiDetailsAccordion() {
 
   allDetails.forEach(d => {
     d.addEventListener('toggle', () => {
-      // 開いたときだけ、他を閉じる
+      // 開くときだけ “他を閉じる” ＋ “位置固定”
       if (!d.open) return;
+
+      const beforeTop = d.getBoundingClientRect().top;
+
+      // 他を閉じる（ここでページが詰まってズレる）
       allDetails.forEach(other => {
         if (other !== d) other.open = false;
+      });
+
+      // レイアウト確定後に位置補正
+      requestAnimationFrame(() => {
+        const afterTop = d.getBoundingClientRect().top;
+        window.scrollBy(0, afterTop - beforeTop);
       });
     });
   });
