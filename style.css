@@ -1,5 +1,6 @@
 
-
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: hidden; }
 /* === 全体設定 === */
 body {
   margin: 0;
