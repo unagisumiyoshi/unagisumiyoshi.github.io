@@ -1,6 +1,5 @@
 
-*, *::before, *::after { box-sizing: border-box; }
-html { overflow-x: hidden; }
+
 /* === 全体設定 === */
 body {
   margin: 0;
@@ -382,10 +381,10 @@ h2::after {
 /* iOSノッチ安全域（任意だが推奨） */
 @supports (padding-top: env(safe-area-inset-top)){
   @media (max-width: 768px){
-    .site-header{
-      padding-top: env(safe-area-inset-top);
+ .site-header{
+ padding-top: env(safe-area-inset-top);
       height: calc(56px + env(safe-area-inset-top));
-    }
+}
   }
 }
 
@@ -629,11 +628,6 @@ h2::after {
   color: #fff;
 }
 
-@media screen and (max-width: 768px) {
-  .site-header {
-    text-align: center; /* コンテナごと中央寄せ */
-  }
-}
 
 .site-footer {
   background-color: #282626;
