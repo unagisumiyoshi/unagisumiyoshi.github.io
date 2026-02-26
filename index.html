@@ -4,25 +4,60 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>うなぎの宿 住吉｜長野市の老舗鰻料理店</title>
+<title>うなぎの宿 住吉｜長野市・善光寺近くの老舗炭火焼き鰻専門店</title>
 <!-- <link rel="preload" href="style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="style.min.css"></noscript> -->
 <link rel="stylesheet" href="style.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&amp;family=Sawarabi+Mincho&amp;display=swap" rel="stylesheet"/>
 <!-- SEO対策 -->
-<meta content="長野市にある老舗のうなぎ料理店『うなぎの宿 住吉』。伝統の味と信州の自然が調和する、本格うなぎ料理をご堪能ください。" name="description"/>
-<meta content="うなぎ, 鰻, 長野市, 住吉, 老舗, 和食, 出前, テイクアウト, コース料理" name="keywords"/>
+<meta name="description" content="長野市箱清水・善光寺近くの老舗鰻専門店「うなぎの宿 住吉」。炭火焼きの蒲焼き・うな重・宴会料理。出前・テイクアウトも承ります。">
 <meta content="index, follow" name="robots"/>
-<link href="https://example.com/" rel="canonical"/> <!-- ← 実際のURLに変更 -->
+<link href="https://unagi-sumiyoshi.com" rel="canonical"/> <!-- ← 実際のURLに変更 -->
 <!-- SNS用 OGP -->
 <meta content="うなぎの宿 住吉｜長野市の老舗鰻料理店" property="og:title"/>
 <meta content="信州の自然と伝統が生む、極上のうなぎ料理をご堪能ください。出前・テイクアウト・コース料理も承ります。" property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://example.com/" property="og:url"/> <!-- ←実際のURL -->
-<meta content="https://example.com/ogp.jpg" property="og:image"/> <!-- ←表示させたい画像のURL -->
+<meta content="https://unagi-sumiyoshi.com" property="og:url"/> <!-- ←実際のURL -->
+<meta content="https://unagi-sumiyoshi.com/picture3/top2.JPG" property="og:image"/> <!-- ←表示させたい画像のURL -->
 <meta content="うなぎの宿 住吉" property="og:site_name"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "うなぎの宿 住吉",
+  "image": "https://unagi-sumiyoshi.com/picture3/top2.JPG",
+  "url": "https://unagi-sumiyoshi.com",
+  "telephone": "026-232-6304",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "箱清水2丁目19-31",
+    "addressLocality": "長野市",
+    "addressRegion": "長野県",
+    "postalCode": "380-0801",
+    "addressCountry": "JP"
+  },
+  "servesCuisine": "うなぎ料理",
+  "priceRange": "¥¥¥",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "11:00",
+      "closes": "14:40"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "16:30",
+      "closes": "20:40"
+    }
+  ]
+}
+</script>
 </head>
+
 <body>
 <div id="loading-overlay">
 <div class="loading-logo-container">
@@ -31,18 +66,7 @@
 </div>
 </div>
 <div id="header-placeholder"></div>
-<!-- ファーストビュー -->
-<section class="first-view">
-<div class="firstview-message">
-<p class="fade-text">
-<span>信</span><span>州</span><span>・</span><span>善</span><span>光</span><span>寺</span><span>の</span><span>ふ</span><span>も</span><span>と</span><span>に</span><span>佇</span><span>む</span>
-</p>
-<p class="fade-text">
-<span>炭</span><span>火</span><span>焼</span><span>う</span><span>な</span><span>ぎ</span><span>の</span><span>老</span><span>舗</span>
-</p>
-</div>
-</section>
-<br/><br/><br/><br/>
+
 <!-- トップスライドショー -->
 <section class="top-slideshow" id="top">
   <div class="slideshow">
@@ -51,25 +75,22 @@
       <img class="slide active" src="picture/gaikanall2.jpg" loading="eager" alt="外観全体">
     </picture>
 
+     <picture>
+    <source srcset="picture3/sumibi.webp" type="image/webp" />
+     <img class="slide" src="picture3/sumibi.jpg" loading="lazy" alt="焼き写真">
+    </picture>
+
     <picture>
       <source srcset="picture3/top2.webp" type="image/webp" />
       <img class="slide" src="picture3/top2.JPG" loading="lazy" alt="うな重の写真">
     </picture>
-
-    <picture>
-      <source srcset="picture/kaiseki1.webp" type="image/webp" />
-      <img class="slide" src="picture/kaiseki1.JPG" loading="lazy" alt="会席料理1">
-    </picture>
-
-    <picture>
-      <source srcset="picture/ikesu.webp" type="image/webp" />
-      <img class="slide" src="picture/ikesu.jpg" loading="lazy" alt="いけす">
-    </picture>
-
+    
     <picture>
       <source srcset="picture3/kuretake3.webp" type="image/webp" />
       <img class="slide" src="picture3/kuretake3.JPG" loading="lazy" alt="お座敷広間">
     </picture>
+
+
   </div>
 
   <div class="indicators">
@@ -77,7 +98,6 @@
     <span data-slide="1"></span>
     <span data-slide="2"></span>
     <span data-slide="3"></span>
-    <span data-slide="4"></span>
   </div>
 </section>
 
