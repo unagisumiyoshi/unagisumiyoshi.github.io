@@ -24,16 +24,28 @@ function setupFixedMenu() {
   const menu = document.querySelector('.bottom-menu-overlay');
   if (!btn || !menu) return;
 
+  const backdrop = menu.querySelector('.bottom-menu-backdrop');
+
+  const openMenu = () => {
+    menu.classList.add('open');
+    menu.setAttribute('aria-hidden', 'false');
+  };
+  const closeMenu = () => {
+    menu.classList.remove('open');
+    menu.setAttribute('aria-hidden', 'true');
+  };
+
   btn.addEventListener('click', () => {
-    menu.classList.toggle('open');
+    menu.classList.contains('open') ? closeMenu() : openMenu();
   });
 
-  const links = menu.querySelectorAll('a');
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('open');
-    });
-  });
+  // リンク押したら閉じる
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // ✅ 画面のどこタップでも閉じる（外側＝backdrop）
+  if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+
 }
 
 // =============================
