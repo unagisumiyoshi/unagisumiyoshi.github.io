@@ -384,13 +384,17 @@ h2::after {
 
 .indicators {
   position: absolute;
-  bottom: 15px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 20px;
   z-index: 10;
 }
+@media (max-width: 768px) {
+  .indicators {
+  bottom: 10px;
+  } }
 
 .indicators span {
   position: relative;
